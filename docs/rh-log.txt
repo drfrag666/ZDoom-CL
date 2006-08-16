@@ -1,3 +1,8 @@
+August 16, 2006
+- Added action special support to the thingdef expression evaluator. Now you
+  can use them like normal functions, which is probably most useful for
+  ACS_ExecuteWithResult.
+
 August 14, 2006
 - Added JPEG texture support, courtesy of Ken's Picture Library. I will
   probably switch to the IJG library once I pare it down. (Ken's code is 18K
