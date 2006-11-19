@@ -120,12 +120,12 @@
 		</Build>
 		<Compiler>
 			<Add option="-DWIN32 -D_WIN32 -D_WINDOWS -DHAVE_STRUPR -DHAVE_FILELENGTH -DI_DO_NOT_LIKE_BIG_DOWNLOADS -D__forceinline=inline -MMD -Izlib -IFLAC -Isrc -Isrc/win32 -Isrc/g_doom -Isrc/g_heretic -I src/g_hexen -Isrc/g_raven -Isrc/g_strife -Isrc/g_shared -Isrc/oplsynth -Isrc/sound" />
-			<Add directory="C:/DEV/dx80_mgw/include" />
+			<Add directory="C:/DEV/dx9mgw/include" />
 			<Add directory="C:/DEV/fmodapi375win/api/inc" />
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,--subsystem,windows" />
-			<Add directory="C:/DEV/dx80_mgw/lib" />
+			<Add directory="C:/DEV/dx9mgw/lib" />
 			<Add directory="C:/DEV/fmodapi375win/api/lib" />
 			<Add directory="FLAC" />
 			<Add directory="zlib" />
@@ -646,6 +646,8 @@
 		<Unit filename="src/win32/cursor1.cur" />
 		<Unit filename="src/win32/deadguy.bmp" />
 		<Unit filename="src/win32/eaxedit.cpp" />
+		<Unit filename="src/win32/fb_d3d9.cpp" />
+		<Unit filename="src/win32/fb_ddraw.cpp" />
 		<Unit filename="src/win32/hardware.cpp" />
 		<Unit filename="src/win32/hardware.h" />
 		<Unit filename="src/win32/helperthread.cpp" />
