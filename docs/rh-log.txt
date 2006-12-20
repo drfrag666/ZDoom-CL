@@ -1,3 +1,10 @@
+December 19, 2006
+- Fixed: D3DFB::Reset() also needs to restore the texture border color,
+  otherwise it gets reset to black and unused. 
+- Fixed: I_SetWndProc() needs to be called before any of the DirectX
+  interfaces are initialized, because DirectX subclasses the window itself,
+  and I_SetWndProc() undoes that subclassing.
+
 November 30, 2006
 - The DSimpleCanvas constructor now fills MemBuffer with zeros.
 - Fixed: If the FBTexture wasn't exactly the same size as the screen,
