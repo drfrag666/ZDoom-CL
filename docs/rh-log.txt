@@ -1,3 +1,11 @@
+January 18, 2007
+- Added D3DCREATE_FPU_PRESERVE to the IDirect3D9::CreateDevice() call.
+  Normally Direct3D sets the FPU to single precision. We don't want that,
+  since it can mean going out of sync with machines that are using the
+  standard precision. Additionally, the nodebuilder requires the extra
+  precision that single precision lacks.
+- Replaced the vector math routines with the ones I developed for the FP code.
+
 December 19, 2006
 - Fixed: D3DFB::Reset() also needs to restore the texture border color,
   otherwise it gets reset to black and unused. 
