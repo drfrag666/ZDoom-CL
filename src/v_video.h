@@ -258,6 +258,9 @@ public:
 	// Changes the vsync setting, if supported by the device.
 	virtual void SetVSync (bool vsync);
 
+	// Tells the device to recreate itself with the new setting from vid_refreshrate.
+	virtual void NewRefreshRate ();
+
 #ifdef _WIN32
 	virtual void PaletteChanged () = 0;
 	virtual int QueryNewPalette () = 0;
