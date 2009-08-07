@@ -151,6 +151,7 @@ typedef enum
 	CF_TOTALLYFROZEN	= 4096, // [RH] All players can do is press +use
 	CF_PREDICTING		= 8192,	// [RH] Player movement is being predicted
 	CF_WEAPONREADY		= 16384,// [RH] Weapon is in the ready state, so bob it when walking
+	CF_BUDDHA			= 1 << 27,		// [SP] Buddha mode - take damage, but don't die
 } cheat_t;
 
 #define WPIECE1		1

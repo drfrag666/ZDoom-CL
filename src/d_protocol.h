@@ -180,6 +180,7 @@ enum ECheatCommand
 	CHT_DONNYTRUMP,
 	CHT_LEGO,
 	CHT_RESSURECT,		// [GRB]
+	CHT_BUDDHA
 };
 
 void StartChunk (int id, byte **stream);

@@ -57,6 +57,9 @@
 #include "templates.h"
 #include "sbar.h"
 
+// Amount of damage done by a telefrag.
+#define TELEFRAG_DAMAGE	1000000
+
 static FRandom pr_obituary ("Obituary");
 static FRandom pr_botrespawn ("BotRespawn");
 static FRandom pr_killmobj ("ActorDie");
@@ -1025,9 +1028,20 @@ void P_DamageMobj (AActor *target, AActor *inflictor, AActor *source, int damage
 			P_AutoUseStrifeHealth (player);
 			player->mo->health = player->health;
 		}
-		if (player->health < 0)
+		if (player->health <= 0)
 		{
-			player->health = 0;
+			// [SP] Buddha cheat: if the player is about to die, rescue him to 1 health.
+			// This does not save the player if damage >= TELEFRAG_DAMAGE, still need to
+			// telefrag him right? ;) (Unfortunately the damage is "absorbed" by armor,
+			// but telefragging should still do enough damage to kill the player)
+			if ((player->cheats & CF_BUDDHA) && damage < TELEFRAG_DAMAGE)
+			{
+				target->health = player->health = 1;
+			}
+			else
+			{
+				player->health = 0;
+			}
 		}
 		player->attacker = source;
 		player->damagecount += damage;	// add damage after armor / invuln
@@ -1306,21 +1320,28 @@ void P_PoisonDamage (player_t *player, AActor *source, int damage,
 	target->health -= damage;
 	if (target->health <= 0)
 	{ // Death
-		target->special1 = damage;
-		if (player && inflictor && !player->morphTics)
-		{ // Check for flame death
-			if ((inflictor->DamageType == MOD_FIRE)
-				&& (target->health > -50) && (damage > 25))
-			{
-				target->DamageType = MOD_FIRE;
+		if ( player->cheats & CF_BUDDHA )
+		{ // [SP] Save the player... 
+			player->health = target->health = 1;
+		}
+		else
+		{
+			target->special1 = damage;
+			if (player && inflictor && !player->morphTics)
+			{ // Check for flame death
+				if ((inflictor->DamageType == MOD_FIRE)
+					&& (target->health > -50) && (damage > 25))
+				{
+					target->DamageType = MOD_FIRE;
+				}
 			}
 			if (inflictor->DamageType == MOD_ICE)
 			{
 				target->DamageType = MOD_ICE;
 			}
+			target->Die (source, source);
+			return;
 		}
-		target->Die (source, source);
-		return;
 	}
 	if (!(level.time&63) && playPainSound && target->PainState != NULL)
 	{
