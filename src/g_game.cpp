@@ -209,9 +209,9 @@ CUSTOM_CVAR (Float, turbo, 100.f, 0)
 	{
 		self = 10.f;
 	}
-	else if (self > 256.f)
+	else if (self > 255.f)
 	{
-		self = 256.f;
+		self = 255.f;
 	}
 	else
 	{
