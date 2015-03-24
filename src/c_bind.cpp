@@ -125,7 +125,7 @@ static const FBinding DefBindings[] =
 static const FBinding DefRavenBindings[] =
 {
 	{ "pgup", "+moveup" },
-	{ "insert", "+movedown" },
+	{ "ins", "+movedown" },
 	{ "home", "land" },
 	{ "pgdn", "+lookup" },
 	{ "del", "+lookdown" },
