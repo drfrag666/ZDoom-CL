@@ -1,0 +1,4524 @@
+# depslib dependency file v1.0
+1147306515 source:c:\dev\zdoom-2.1.4-src\src\a.nas
+
+1148258047 source:c:\dev\zdoom-2.1.4-src\src\am_map.cpp
+	<stdio.h>
+	"doomdef.h"
+	"templates.h"
+	"g_level.h"
+	"doomdef.h"
+	"st_stuff.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"w_wad.h"
+	"m_cheat.h"
+	"i_system.h"
+	"c_dispatch.h"
+	"v_video.h"
+	"v_text.h"
+	"doomstat.h"
+	"r_state.h"
+	"gstrings.h"
+	"am_map.h"
+	"a_artifacts.h"
+
+1152602825 c:\dev\zdoom-2.1.4-src\src\doomdef.h
+	<stdio.h>
+	<string.h>
+	"farchive.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\farchive.h
+	<stdio.h>
+	"doomtype.h"
+	"dobject.h"
+	"tarray.h"
+	"name.h"
+	"dobject.h"
+
+1147225243 c:\dev\zdoom-2.1.4-src\src\doomtype.h
+	"config.h"
+	<limits.h>
+	"zstring.h"
+	"name.h"
+
+1148614702 c:\dev\zdoom-2.1.4-src\src\zstring.h
+	<stdio.h>
+	<stdarg.h>
+	<string.h>
+	<stddef.h>
+	"tarray.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\tarray.h
+	<stdlib.h>
+	<assert.h>
+	<new>
+	"m_alloc.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\m_alloc.h
+	<stdlib.h>
+	<stdlib.h>
+	<crtdbg.h>
+
+1147225243 c:\dev\zdoom-2.1.4-src\src\name.h
+	"doomtype.h"
+	"namedef.h"
+
+1150572581 c:\dev\zdoom-2.1.4-src\src\namedef.h
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\dobject.h
+	<stdlib.h>
+	"tarray.h"
+	"doomtype.h"
+	"m_alloc.h"
+	"dobjtype.h"
+
+1147400080 c:\dev\zdoom-2.1.4-src\src\dobjtype.h
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\templates.h
+	<stdlib.h>
+
+1152671755 c:\dev\zdoom-2.1.4-src\src\g_level.h
+	"doomtype.h"
+	"doomdef.h"
+	"m_fixed.h"
+	"tarray.h"
+	"name.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\m_fixed.h
+	<stdlib.h>
+	"doomtype.h"
+	"gccinlines.h"
+	"mscinlines.h"
+	"basicinlines.h"
+
+1140756495 c:\dev\zdoom-2.1.4-src\src\gccinlines.h
+	<stdlib.h>
+
+1148354749 c:\dev\zdoom-2.1.4-src\src\mscinlines.h
+	<string.h>
+	<stddef.h>
+	"x64inlines.h"
+
+1148527940 c:\dev\zdoom-2.1.4-src\src\x64inlines.h
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\basicinlines.h
+	<string.h>
+	<stddef.h>
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\st_stuff.h
+	"d_event.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\d_event.h
+	"doomtype.h"
+
+1151873890 c:\dev\zdoom-2.1.4-src\src\p_local.h
+	"r_local.h"
+	<stdlib.h>
+	"p_spec.h"
+
+1147912970 c:\dev\zdoom-2.1.4-src\src\r_local.h
+	"tables.h"
+	"doomdef.h"
+	"r_data.h"
+	"r_main.h"
+	"r_bsp.h"
+	"r_segs.h"
+	"r_plane.h"
+	"r_data.h"
+	"r_things.h"
+	"r_draw.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\tables.h
+	<math.h>
+	"m_fixed.h"
+
+1152782276 c:\dev\zdoom-2.1.4-src\src\r_data.h
+	"r_defs.h"
+	"r_state.h"
+	"v_video.h"
+
+1152782276 c:\dev\zdoom-2.1.4-src\src\r_defs.h
+	"doomdef.h"
+	"m_fixed.h"
+	"actor.h"
+	"dthinker.h"
+
+1153037445 c:\dev\zdoom-2.1.4-src\src\actor.h
+	"tables.h"
+	"m_fixed.h"
+	"dthinker.h"
+	"doomdata.h"
+	"info.h"
+	"doomdef.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\dthinker.h
+	<stdlib.h>
+	"dobject.h"
+	"lists.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\lists.h
+
+1150356373 c:\dev\zdoom-2.1.4-src\src\doomdata.h
+	"doomtype.h"
+	"doomdef.h"
+
+1153058410 c:\dev\zdoom-2.1.4-src\src\info.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	"dobject.h"
+	"dthinker.h"
+	"farchive.h"
+	"doomdef.h"
+	"name.h"
+	"infomacros.h"
+
+1153058410 c:\dev\zdoom-2.1.4-src\src\infomacros.h
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\r_state.h
+	"d_player.h"
+	"r_data.h"
+
+1153041794 c:\dev\zdoom-2.1.4-src\src\d_player.h
+	"d_ticcmd.h"
+	"a_artifacts.h"
+	"p_pspr.h"
+	"actor.h"
+	"d_netinf.h"
+	"b_bot.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\d_ticcmd.h
+	"doomtype.h"
+	"d_protocol.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\d_protocol.h
+	"doomstat.h"
+	"doomtype.h"
+	"doomdef.h"
+	"m_fixed.h"
+	"farchive.h"
+
+1149334211 c:\dev\zdoom-2.1.4-src\src\doomstat.h
+	"doomdata.h"
+	"d_net.h"
+	"g_level.h"
+	"c_cvars.h"
+
+1147400080 c:\dev\zdoom-2.1.4-src\src\d_net.h
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\c_cvars.h
+	"doomtype.h"
+	"tarray.h"
+
+1150600247 c:\dev\zdoom-2.1.4-src\src\g_shared\a_artifacts.h
+	"farchive.h"
+	"a_pickups.h"
+
+1150600247 c:\dev\zdoom-2.1.4-src\src\g_shared\a_pickups.h
+	"dobject.h"
+	"actor.h"
+	"info.h"
+
+1147225243 c:\dev\zdoom-2.1.4-src\src\p_pspr.h
+	"m_fixed.h"
+	"tables.h"
+	"info.h"
+
+1152782276 c:\dev\zdoom-2.1.4-src\src\d_netinf.h
+	"c_cvars.h"
+
+1147316458 c:\dev\zdoom-2.1.4-src\src\b_bot.h
+	"c_cvars.h"
+	"m_argv.h"
+	"tables.h"
+	"info.h"
+	"doomdef.h"
+	"d_ticcmd.h"
+	"r_defs.h"
+	"a_pickups.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\m_argv.h
+	"dobject.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\v_video.h
+	"doomtype.h"
+	"m_bbox.h"
+	"v_palette.h"
+	"v_font.h"
+	"colormatcher.h"
+	"doomdef.h"
+	"r_data.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\m_bbox.h
+	"doomtype.h"
+	"dobject.h"
+	"m_fixed.h"
+
+1153368819 c:\dev\zdoom-2.1.4-src\src\v_palette.h
+	"doomtype.h"
+	"r_main.h"
+
+1150642140 c:\dev\zdoom-2.1.4-src\src\r_main.h
+	"d_player.h"
+	"r_data.h"
+	"r_bsp.h"
+	"r_state.h"
+
+1146719692 c:\dev\zdoom-2.1.4-src\src\r_bsp.h
+	"tarray.h"
+	<stddef.h>
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\v_font.h
+	"doomtype.h"
+	"farchive.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\colormatcher.h
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\r_segs.h
+	"c_cvars.h"
+
+1147400080 c:\dev\zdoom-2.1.4-src\src\r_plane.h
+	<stddef.h>
+	"r_data.h"
+
+1147400080 c:\dev\zdoom-2.1.4-src\src\r_things.h
+
+1147206631 c:\dev\zdoom-2.1.4-src\src\r_draw.h
+	"r_data.h"
+
+1148614702 c:\dev\zdoom-2.1.4-src\src\p_spec.h
+	"dsectoreffect.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\dsectoreffect.h
+	"dobject.h"
+	"dthinker.h"
+	"r_defs.h"
+
+1151489660 c:\dev\zdoom-2.1.4-src\src\p_lnspec.h
+	"doomtype.h"
+
+1152782276 c:\dev\zdoom-2.1.4-src\src\w_wad.h
+	"files.h"
+	"doomdef.h"
+
+1144769261 c:\dev\zdoom-2.1.4-src\src\files.h
+	<stdio.h>
+	<zlib.h>
+	"doomtype.h"
+	"m_swap.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\zlib\zlib.h
+	"zconf.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\zlib\zconf.h
+	<windows.h>
+	<sys/types.h>
+	<unistd.h>
+	<unixio.h>
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\m_swap.h
+	<stdlib.h>
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\m_cheat.h
+
+1152321455 c:\dev\zdoom-2.1.4-src\src\win32\i_system.h
+	"d_main.h"
+	"d_ticcmd.h"
+	"d_event.h"
+
+1147744218 c:\dev\zdoom-2.1.4-src\src\d_main.h
+	"d_event.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\c_dispatch.h
+	"dobject.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\v_text.h
+	"doomtype.h"
+	"v_font.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\gstrings.h
+	"stringtable.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\stringtable.h
+	<stdlib.h>
+	"doomtype.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\am_map.h
+	"d_event.h"
+
+1489834553 source:c:\dev\zdoom-2.1.4-src\src\autostart.cpp
+	"autosegs.h"
+	<windows.h>
+	<winnt.h>
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\autosegs.h
+
+1489834576 source:c:\dev\zdoom-2.1.4-src\src\autozend.cpp
+	"autosegs.h"
+
+1147744218 source:c:\dev\zdoom-2.1.4-src\src\b_bot.cpp
+	"c_cvars.h"
+	"c_dispatch.h"
+	"b_bot.h"
+	"m_argv.h"
+	"doomstat.h"
+	"p_local.h"
+	"cmdlib.h"
+
+1152321455 c:\dev\zdoom-2.1.4-src\src\cmdlib.h
+	"doomtype.h"
+	"zstring.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<ctype.h>
+	<stdarg.h>
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\b_func.cpp
+	<malloc.h>
+	"doomtype.h"
+	"doomdef.h"
+	"doomstat.h"
+	"p_local.h"
+	"b_bot.h"
+	"g_game.h"
+	"m_random.h"
+	"r_sky.h"
+	"r_main.h"
+	"st_stuff.h"
+	"stats.h"
+	"i_system.h"
+	"s_sound.h"
+	"vectors.h"
+	"a_doomglobal.h"
+
+1147744218 c:\dev\zdoom-2.1.4-src\src\g_game.h
+	"doomdef.h"
+	"d_event.h"
+
+1148614702 c:\dev\zdoom-2.1.4-src\src\m_random.h
+	<stdio.h>
+	"doomtype.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\r_sky.h
+	"c_cvars.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\stats.h
+	"i_system.h"
+	<intrin.h>
+
+1150021728 c:\dev\zdoom-2.1.4-src\src\s_sound.h
+	"m_fixed.h"
+	"tarray.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\vectors.h
+	<math.h>
+	"tables.h"
+
+1150572581 c:\dev\zdoom-2.1.4-src\src\g_doom\a_doomglobal.h
+	"dobject.h"
+	"info.h"
+	"d_player.h"
+
+1151630006 source:c:\dev\zdoom-2.1.4-src\src\b_game.cpp
+	"doomdef.h"
+	"p_local.h"
+	"b_bot.h"
+	"g_game.h"
+	"m_random.h"
+	"r_things.h"
+	"doomstat.h"
+	"cmdlib.h"
+	"sc_man.h"
+	"stats.h"
+	"m_misc.h"
+	"sbar.h"
+	"p_acs.h"
+
+1146430158 c:\dev\zdoom-2.1.4-src\src\sc_man.h
+
+1147400080 c:\dev\zdoom-2.1.4-src\src\m_misc.h
+	"doomtype.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\g_shared\sbar.h
+	"dobject.h"
+	"m_fixed.h"
+	"v_collection.h"
+	"v_text.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\v_collection.h
+	"doomtype.h"
+	"r_defs.h"
+
+1153077204 c:\dev\zdoom-2.1.4-src\src\p_acs.h
+	"dobject.h"
+	"doomtype.h"
+
+1148824441 source:c:\dev\zdoom-2.1.4-src\src\b_move.cpp
+	"doomdef.h"
+	"doomstat.h"
+	"p_local.h"
+	"b_bot.h"
+	"g_game.h"
+	"d_ticcmd.h"
+	"m_random.h"
+	"r_main.h"
+	"i_system.h"
+	"p_lnspec.h"
+	"gi.h"
+	"a_keys.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\gi.h
+	"doomtype.h"
+
+1147400080 c:\dev\zdoom-2.1.4-src\src\g_shared\a_keys.h
+	"a_pickups.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\b_think.cpp
+	"doomdef.h"
+	"doomstat.h"
+	"p_local.h"
+	"b_bot.h"
+	"g_game.h"
+	"m_random.h"
+	"r_main.h"
+	"stats.h"
+	"a_pickups.h"
+	"statnums.h"
+
+1151709696 c:\dev\zdoom-2.1.4-src\src\statnums.h
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\bbannouncer.cpp
+	"actor.h"
+	"gstrings.h"
+	"s_sound.h"
+	"m_random.h"
+	"d_player.h"
+
+1152472538 source:c:\dev\zdoom-2.1.4-src\src\c_bind.cpp
+	"doomtype.h"
+	"doomdef.h"
+	"cmdlib.h"
+	"c_dispatch.h"
+	"c_bind.h"
+	"g_level.h"
+	"hu_stuff.h"
+	"gi.h"
+	"configfile.h"
+	"i_system.h"
+	<math.h>
+	<stdlib.h>
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\c_bind.h
+	"doomtype.h"
+	"d_event.h"
+	<stdio.h>
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\hu_stuff.h
+	"d_event.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\configfile.h
+
+1152478216 source:c:\dev\zdoom-2.1.4-src\src\c_cmds.cpp
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<direct.h>
+	<unistd.h>
+	"version.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"i_system.h"
+	"doomstat.h"
+	"gstrings.h"
+	"s_sound.h"
+	"g_game.h"
+	"g_level.h"
+	"w_wad.h"
+	"g_level.h"
+	"gi.h"
+	"r_defs.h"
+	"d_player.h"
+	"r_main.h"
+	"templates.h"
+	"p_local.h"
+	"r_sky.h"
+	"p_setup.h"
+
+1154132784 c:\dev\zdoom-2.1.4-src\src\version.h
+	"svnrevision.h"
+
+1154133713 c:\dev\zdoom-2.1.4-src\src\svnrevision.h
+
+1151630006 c:\dev\zdoom-2.1.4-src\src\c_console.h
+	<stdio.h>
+	<stdarg.h>
+	"doomtype.h"
+	"doomdef.h"
+	"d_event.h"
+	"cmdlib.h"
+
+1150356373 c:\dev\zdoom-2.1.4-src\src\p_setup.h
+	"w_wad.h"
+	"files.h"
+	"doomdata.h"
+
+1153321244 source:c:\dev\zdoom-2.1.4-src\src\c_console.cpp
+	"m_alloc.h"
+	"templates.h"
+	"p_setup.h"
+	<stdarg.h>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+	"version.h"
+	"g_game.h"
+	"c_console.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"hu_stuff.h"
+	"i_system.h"
+	"i_video.h"
+	"i_input.h"
+	"m_swap.h"
+	"v_palette.h"
+	"v_video.h"
+	"v_text.h"
+	"w_wad.h"
+	"r_main.h"
+	"r_draw.h"
+	"sbar.h"
+	"s_sound.h"
+	"s_sndseq.h"
+	"doomstat.h"
+	"d_gui.h"
+	"v_video.h"
+	"gi.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\i_video.h
+	"doomtype.h"
+	"v_video.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\win32\i_input.h
+	"doomtype.h"
+
+1148614702 c:\dev\zdoom-2.1.4-src\src\s_sndseq.h
+	<stddef.h>
+	"s_sound.h"
+	"r_defs.h"
+	"name.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\d_gui.h
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\c_cvars.cpp
+	<string.h>
+	<stdio.h>
+	<assert.h>
+	"cmdlib.h"
+	"configfile.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"m_alloc.h"
+	"doomstat.h"
+	"c_cvars.h"
+	"d_player.h"
+	"d_netinf.h"
+	"i_system.h"
+	"v_palette.h"
+	"v_video.h"
+
+1152782276 source:c:\dev\zdoom-2.1.4-src\src\c_dispatch.cpp
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<assert.h>
+	"templates.h"
+	"doomtype.h"
+	"cmdlib.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"m_argv.h"
+	"doomstat.h"
+	"m_alloc.h"
+	"d_player.h"
+	"configfile.h"
+	"m_crc32.h"
+	"v_text.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\m_crc32.h
+	<zlib.h>
+	"doomtype.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\c_expr.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"c_dispatch.h"
+	"c_cvars.h"
+
+1152321455 source:c:\dev\zdoom-2.1.4-src\src\cmdlib.cpp
+	<windows.h>
+	<direct.h>
+	"doomtype.h"
+	"cmdlib.h"
+	"i_system.h"
+	<sys/types.h>
+	<sys/stat.h>
+	<time.h>
+	"m_alloc.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\colormatcher.cpp
+	<stdlib.h>
+	<string.h>
+	"doomtype.h"
+	"colormatcher.h"
+	"i_system.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\configfile.cpp
+	<stdio.h>
+	<string.h>
+	"doomtype.h"
+	"configfile.h"
+
+1147225243 source:c:\dev\zdoom-2.1.4-src\src\ct_chat.cpp
+	<string.h>
+	<ctype.h>
+	"doomdef.h"
+	"m_swap.h"
+	"hu_stuff.h"
+	"w_wad.h"
+	"s_sound.h"
+	"doomstat.h"
+	"st_stuff.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"c_cvars.h"
+	"v_text.h"
+	"v_video.h"
+	"gi.h"
+	"d_gui.h"
+	"i_input.h"
+	"templates.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\d_dehacked.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stddef.h>
+	"doomtype.h"
+	"templates.h"
+	"doomstat.h"
+	"info.h"
+	"d_dehacked.h"
+	"s_sound.h"
+	"g_level.h"
+	"cmdlib.h"
+	"gstrings.h"
+	"m_alloc.h"
+	"m_misc.h"
+	"w_wad.h"
+	"d_player.h"
+	"r_state.h"
+	"gi.h"
+	"c_dispatch.h"
+	"decallib.h"
+	"r_draw.h"
+	"v_palette.h"
+	"a_sharedglobal.h"
+	"d_dehackedactions.h"
+	"d_dehackedactions.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\d_dehacked.h
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\decallib.h
+	<string.h>
+	"doomtype.h"
+	"tarray.h"
+	"name.h"
+
+1151709696 c:\dev\zdoom-2.1.4-src\src\g_shared\a_sharedglobal.h
+	"dobject.h"
+	"info.h"
+	"actor.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\d_dehackedactions.h
+
+1152782276 source:c:\dev\zdoom-2.1.4-src\src\d_main.cpp
+	<direct.h>
+	<sys/stat.h>
+	<unistd.h>
+	<time.h>
+	<math.h>
+	<assert.h>
+	"doomerrors.h"
+	"d_gui.h"
+	"m_alloc.h"
+	"m_random.h"
+	"doomdef.h"
+	"doomstat.h"
+	"gstrings.h"
+	"w_wad.h"
+	"s_sound.h"
+	"v_video.h"
+	"f_finale.h"
+	"f_wipe.h"
+	"m_argv.h"
+	"m_misc.h"
+	"m_menu.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"i_system.h"
+	"i_sound.h"
+	"i_video.h"
+	"g_game.h"
+	"hu_stuff.h"
+	"wi_stuff.h"
+	"st_stuff.h"
+	"am_map.h"
+	"p_setup.h"
+	"r_local.h"
+	"r_sky.h"
+	"d_main.h"
+	"d_dehacked.h"
+	"cmdlib.h"
+	"s_sound.h"
+	"m_swap.h"
+	"v_text.h"
+	"gi.h"
+	"b_bot.h"
+	"stats.h"
+	"a_doomglobal.h"
+	"gameconfigfile.h"
+	"sbar.h"
+	"decallib.h"
+	"r_polymost.h"
+	"version.h"
+	"v_text.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\doomerrors.h
+	<string.h>
+	<stdio.h>
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\f_finale.h
+	"doomtype.h"
+	"d_event.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\f_wipe.h
+
+1147520475 c:\dev\zdoom-2.1.4-src\src\m_menu.h
+	"d_event.h"
+	"c_cvars.h"
+
+1151630006 c:\dev\zdoom-2.1.4-src\src\sound\i_sound.h
+	"s_sound.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\wi_stuff.h
+	"doomdef.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\gameconfigfile.h
+	"configfile.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\r_polymost.h
+	"c_cvars.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\d_net.cpp
+	<stddef.h>
+	"version.h"
+	"m_alloc.h"
+	"m_menu.h"
+	"m_random.h"
+	"i_system.h"
+	"i_video.h"
+	"i_net.h"
+	"g_game.h"
+	"doomdef.h"
+	"doomstat.h"
+	"c_console.h"
+	"d_netinf.h"
+	"cmdlib.h"
+	"s_sound.h"
+	"m_cheat.h"
+	"p_effect.h"
+	"p_local.h"
+	"c_dispatch.h"
+	"sbar.h"
+	"gi.h"
+	"m_misc.h"
+	"gameconfigfile.h"
+	"d_gui.h"
+	"templates.h"
+	"p_acs.h"
+	"p_trace.h"
+	"a_sharedglobal.h"
+
+1151630006 c:\dev\zdoom-2.1.4-src\src\i_net.h
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\p_effect.h
+	"vectors.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\p_trace.h
+	"r_defs.h"
+
+1152782276 source:c:\dev\zdoom-2.1.4-src\src\d_netinfo.cpp
+	<math.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"doomtype.h"
+	"doomdef.h"
+	"doomstat.h"
+	"d_netinf.h"
+	"d_net.h"
+	"d_protocol.h"
+	"c_dispatch.h"
+	"v_palette.h"
+	"v_video.h"
+	"i_system.h"
+	"r_draw.h"
+	"r_state.h"
+	"sbar.h"
+	"gi.h"
+	"m_random.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\d_protocol.cpp
+	"m_alloc.h"
+	"i_system.h"
+	"d_protocol.h"
+	"d_ticcmd.h"
+	"d_net.h"
+	"doomdef.h"
+	"doomstat.h"
+	"cmdlib.h"
+	<assert.h>
+
+1150727470 source:c:\dev\zdoom-2.1.4-src\src\decallib.cpp
+	"decallib.h"
+	"sc_man.h"
+	"w_wad.h"
+	"v_video.h"
+	"v_palette.h"
+	"cmdlib.h"
+	"m_random.h"
+	"weightedlist.h"
+	"statnums.h"
+	"templates.h"
+	"r_draw.h"
+	"a_sharedglobal.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\weightedlist.h
+	<stdlib.h>
+	"doomtype.h"
+	"m_random.h"
+
+1150928537 source:c:\dev\zdoom-2.1.4-src\src\decorations.cpp
+	"actor.h"
+	"info.h"
+	"sc_man.h"
+	"tarray.h"
+	"w_wad.h"
+	"templates.h"
+	"r_defs.h"
+	"r_draw.h"
+	"a_pickups.h"
+	"s_sound.h"
+	"cmdlib.h"
+	"p_lnspec.h"
+	"p_enemy.h"
+	"a_action.h"
+	"decallib.h"
+	"i_system.h"
+
+1147225243 c:\dev\zdoom-2.1.4-src\src\p_enemy.h
+	"r_defs.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\g_shared\a_action.h
+
+1150338679 source:c:\dev\zdoom-2.1.4-src\src\dobject.cpp
+	<stdlib.h>
+	<string.h>
+	"cmdlib.h"
+	"actor.h"
+	"dobject.h"
+	"m_alloc.h"
+	"doomstat.h"
+	"d_player.h"
+	"g_game.h"
+	"c_dispatch.h"
+	"i_system.h"
+	"r_state.h"
+	"stats.h"
+	"autosegs.h"
+
+1153260551 source:c:\dev\zdoom-2.1.4-src\src\dobjtype.cpp
+	"dobject.h"
+	"i_system.h"
+	"actor.h"
+	"autosegs.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\doomdef.cpp
+	"doomdef.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\doomstat.cpp
+	"stringtable.h"
+	"doomstat.h"
+	"c_cvars.h"
+	"i_system.h"
+	"g_level.h"
+	"p_local.h"
+	"p_acs.h"
+
+1144894387 source:c:\dev\zdoom-2.1.4-src\src\dsectoreffect.cpp
+	"dsectoreffect.h"
+	"gi.h"
+	"p_local.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\dthinker.cpp
+	"dthinker.h"
+	"stats.h"
+	"p_local.h"
+	"statnums.h"
+	"i_system.h"
+	"doomerrors.h"
+
+1148258047 source:c:\dev\zdoom-2.1.4-src\src\f_finale.cpp
+	<ctype.h>
+	<math.h>
+	<malloc.h>
+	"i_system.h"
+	"m_swap.h"
+	"v_video.h"
+	"i_video.h"
+	"v_text.h"
+	"w_wad.h"
+	"s_sound.h"
+	"gstrings.h"
+	"doomstat.h"
+	"r_state.h"
+	"r_draw.h"
+	"hu_stuff.h"
+	"cmdlib.h"
+	"gi.h"
+	"p_conversation.h"
+	"a_strifeglobal.h"
+	"templates.h"
+
+1154132784 c:\dev\zdoom-2.1.4-src\src\p_conversation.h
+
+1150572581 c:\dev\zdoom-2.1.4-src\src\g_strife\a_strifeglobal.h
+	"dobject.h"
+	"info.h"
+	"a_pickups.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\f_wipe.cpp
+	"i_video.h"
+	"v_video.h"
+	"m_random.h"
+	"m_alloc.h"
+	"doomdef.h"
+	"f_wipe.h"
+	"c_cvars.h"
+
+1150831839 source:c:\dev\zdoom-2.1.4-src\src\farchive.cpp
+	<stddef.h>
+	<string.h>
+	<zlib.h>
+	<malloc.h>
+	"doomtype.h"
+	"farchive.h"
+	"m_alloc.h"
+	"m_swap.h"
+	"m_crc32.h"
+	"cmdlib.h"
+	"i_system.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"d_player.h"
+	"dobject.h"
+	"r_local.h"
+
+1144769261 source:c:\dev\zdoom-2.1.4-src\src\files.cpp
+	"files.h"
+	"i_system.h"
+	"templates.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_arachnotron.cpp
+	"actor.h"
+	"info.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_doomglobal.h"
+	"gstrings.h"
+	"a_action.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_archvile.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_doomglobal.h"
+	"gstrings.h"
+	"a_action.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_bossbrain.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"a_doomglobal.h"
+	"statnums.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_bruiser.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"doomstat.h"
+	"gstrings.h"
+	"a_action.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_cacodemon.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"p_local.h"
+	"p_enemy.h"
+	"gstrings.h"
+	"a_action.h"
+	"s_sound.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_cyberdemon.cpp
+	"templates.h"
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_doomglobal.h"
+	"gstrings.h"
+	"a_action.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_demon.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"p_local.h"
+	"p_enemy.h"
+	"gstrings.h"
+	"a_action.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_doomartifacts.cpp
+	"info.h"
+	"a_pickups.h"
+	"d_player.h"
+	"p_local.h"
+	"gi.h"
+	"gstrings.h"
+	"s_sound.h"
+	"m_random.h"
+	"p_local.h"
+	"p_spec.h"
+	"p_lnspec.h"
+	"p_enemy.h"
+	"p_effect.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_doomimp.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"gstrings.h"
+	"a_action.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_doommisc.cpp
+	"actor.h"
+	"info.h"
+	"p_enemy.h"
+	"p_local.h"
+	"a_doomglobal.h"
+	"a_sharedglobal.h"
+	"m_random.h"
+	"gi.h"
+	"doomstat.h"
+	"gstrings.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_doomplayer.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"a_doomglobal.h"
+	"w_wad.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_doomweaps.cpp
+	"actor.h"
+	"info.h"
+	"s_sound.h"
+	"m_random.h"
+	"a_pickups.h"
+	"a_doomglobal.h"
+	"d_player.h"
+	"p_pspr.h"
+	"p_local.h"
+	"gstrings.h"
+	"p_effect.h"
+	"gi.h"
+	"templates.h"
+	"thingdef.h"
+
+1152782276 c:\dev\zdoom-2.1.4-src\src\thingdef.h
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_fatso.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"gstrings.h"
+	"a_action.h"
+	"thingdef.h"
+
+1147225243 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_keen.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"p_spec.h"
+	"p_enemy.h"
+	"a_action.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_lostsoul.cpp
+	"templates.h"
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_doomglobal.h"
+	"gi.h"
+	"gstrings.h"
+	"a_action.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_painelemental.cpp
+	"actor.h"
+	"info.h"
+	"p_enemy.h"
+	"p_local.h"
+	"a_doomglobal.h"
+	"a_action.h"
+	"thingdef.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_possessed.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"gstrings.h"
+	"a_action.h"
+	"a_doomglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_revenant.cpp
+	"templates.h"
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"gstrings.h"
+	"a_action.h"
+	"a_doomglobal.h"
+
+1147225243 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_scriptedmarine.cpp
+	"actor.h"
+	"p_enemy.h"
+	"a_action.h"
+	"r_draw.h"
+	"m_random.h"
+	"p_local.h"
+	"a_doomglobal.h"
+	"s_sound.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_doom\a_spidermaster.cpp
+	"templates.h"
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"gstrings.h"
+	"a_action.h"
+
+1147225243 source:c:\dev\zdoom-2.1.4-src\src\g_doom\doom_sbar.cpp
+	"doomtype.h"
+	"doomstat.h"
+	"v_font.h"
+	"v_video.h"
+	"sbar.h"
+	"r_defs.h"
+	"w_wad.h"
+	"m_random.h"
+	"d_player.h"
+	"st_stuff.h"
+	"r_local.h"
+	"m_swap.h"
+	"a_keys.h"
+	"templates.h"
+	"i_system.h"
+
+1152782276 source:c:\dev\zdoom-2.1.4-src\src\g_game.cpp
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<stddef.h>
+	<time.h>
+	"templates.h"
+	"version.h"
+	"m_alloc.h"
+	"doomdef.h"
+	"doomstat.h"
+	"d_protocol.h"
+	"d_netinf.h"
+	"f_finale.h"
+	"m_argv.h"
+	"m_misc.h"
+	"m_menu.h"
+	"m_random.h"
+	"m_crc32.h"
+	"i_system.h"
+	"p_setup.h"
+	"p_saveg.h"
+	"p_effect.h"
+	"p_tick.h"
+	"d_main.h"
+	"wi_stuff.h"
+	"hu_stuff.h"
+	"st_stuff.h"
+	"am_map.h"
+	"c_console.h"
+	"c_cvars.h"
+	"c_bind.h"
+	"c_dispatch.h"
+	"v_video.h"
+	"w_wad.h"
+	"p_local.h"
+	"s_sound.h"
+	"gstrings.h"
+	"r_data.h"
+	"r_sky.h"
+	"r_draw.h"
+	"g_game.h"
+	"g_level.h"
+	"b_bot.h"
+	"sbar.h"
+	"m_swap.h"
+	"m_png.h"
+	"gi.h"
+	"a_keys.h"
+	"a_artifacts.h"
+	<zlib.h>
+	"g_hub.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\p_saveg.h
+	"farchive.h"
+
+1148173816 c:\dev\zdoom-2.1.4-src\src\p_tick.h
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\m_png.h
+	"v_video.h"
+
+1144769261 c:\dev\zdoom-2.1.4-src\src\g_hub.h
+	<stdio.h>
+	"g_level.h"
+	"wi_stuff.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_beast.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"gstrings.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_chicken.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"a_pickups.h"
+	"p_local.h"
+	"a_hereticglobal.h"
+	"a_sharedglobal.h"
+	"p_enemy.h"
+	"d_event.h"
+	"ravenshared.h"
+	"gstrings.h"
+
+1150572581 c:\dev\zdoom-2.1.4-src\src\g_heretic\a_hereticglobal.h
+	"info.h"
+	"a_pickups.h"
+
+1147225243 c:\dev\zdoom-2.1.4-src\src\g_raven\ravenshared.h
+
+1151587316 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_clink.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"gstrings.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_dsparil.cpp
+	"actor.h"
+	"info.h"
+	"a_hereticglobal.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"s_sound.h"
+	"m_random.h"
+	"a_sharedglobal.h"
+	"gstrings.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_hereticartifacts.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_hereticimp.cpp
+	"templates.h"
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"gstrings.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_heretickeys.cpp
+	"info.h"
+	"a_pickups.h"
+	"d_player.h"
+	"gstrings.h"
+	"p_local.h"
+	"a_keys.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_hereticmisc.cpp
+	"actor.h"
+	"info.h"
+	"p_enemy.h"
+	"a_doomglobal.h"
+	"a_hereticglobal.h"
+	"a_pickups.h"
+	"a_action.h"
+	"m_random.h"
+	"p_local.h"
+	"s_sound.h"
+	"gstrings.h"
+
+1153368819 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_hereticplayer.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"thingdef.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_hereticweaps.cpp
+	"templates.h"
+	"actor.h"
+	"info.h"
+	"s_sound.h"
+	"m_random.h"
+	"a_pickups.h"
+	"a_hereticglobal.h"
+	"d_player.h"
+	"p_pspr.h"
+	"p_local.h"
+	"gstrings.h"
+	"p_effect.h"
+	"gstrings.h"
+	"p_enemy.h"
+	"gi.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_ironlich.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"gstrings.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_knight.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"a_sharedglobal.h"
+	"gstrings.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_mummy.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"gstrings.h"
+
+1151587316 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_snake.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"gstrings.h"
+
+1151587316 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\a_wizard.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_hereticglobal.h"
+	"a_action.h"
+	"gstrings.h"
+
+1147400080 source:c:\dev\zdoom-2.1.4-src\src\g_heretic\heretic_sbar.cpp
+	<assert.h>
+	"doomtype.h"
+	"doomstat.h"
+	"v_font.h"
+	"sbar.h"
+	"r_defs.h"
+	"w_wad.h"
+	"m_random.h"
+	"d_player.h"
+	"st_stuff.h"
+	"v_video.h"
+	"r_draw.h"
+	"templates.h"
+	"a_keys.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_bats.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"p_local.h"
+	"s_sound.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_bishop.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+	"a_hexenglobal.h"
+
+1153041794 c:\dev\zdoom-2.1.4-src\src\g_hexen\a_hexenglobal.h
+	"d_player.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_blastradius.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_boostarmor.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"gi.h"
+	"s_sound.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_centaur.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+	"a_hexenglobal.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_clericboss.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_clericflame.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_clericholy.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_hexenglobal.h"
+	"gstrings.h"
+
+1147520475 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_clericmace.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_clericplayer.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"a_hexenglobal.h"
+	"templates.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_clericstaff.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_demons.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_dragon.cpp
+	"actor.h"
+	"info.h"
+	"p_enemy.h"
+	"p_local.h"
+	"a_action.h"
+	"m_random.h"
+	"s_sound.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_ettin.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_fighteraxe.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+	"p_effect.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_fighterboss.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_fighterhammer.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_fighterplayer.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"a_hexenglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_fighterquietus.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_firedemon.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_flechette.cpp
+	"actor.h"
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"m_random.h"
+	"a_action.h"
+	"a_hexenglobal.h"
+	"w_wad.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_fog.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"p_local.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_healingradius.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"m_random.h"
+	"a_action.h"
+	"a_hexenglobal.h"
+	"gi.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_heresiarch.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+	"a_hexenglobal.h"
+	"i_system.h"
+	"p_acs.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_hexenspecialdecs.cpp
+	"actor.h"
+	"info.h"
+	"a_action.h"
+	"p_enemy.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"a_hexenglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_iceguy.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_korax.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"p_spec.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+	"i_system.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_mageboss.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_magecone.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_magelightning.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_mageplayer.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"a_hexenglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_magestaff.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_hexenglobal.h"
+	"gstrings.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_magewand.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_pig.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"a_pickups.h"
+	"p_local.h"
+	"a_hereticglobal.h"
+	"a_sharedglobal.h"
+	"p_enemy.h"
+	"d_event.h"
+	"ravenshared.h"
+	"gstrings.h"
+
+1146767772 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_puzzleitems.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"c_console.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_serpent.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+	"p_terrain.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\p_terrain.h
+	"dobject.h"
+	"m_fixed.h"
+	"tarray.h"
+	"name.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_spike.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"p_enemy.h"
+	"p_local.h"
+	"a_sharedglobal.h"
+	"s_sound.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_summon.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"ravenshared.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_teleportother.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"p_lnspec.h"
+	"m_random.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_weaponpieces.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_pspr.h"
+	"gstrings.h"
+	"a_hexenglobal.h"
+	"sbar.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\a_wraith.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"a_action.h"
+	"m_random.h"
+	"a_sharedglobal.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_hexen\hexen_sbar.cpp
+	<assert.h>
+	"doomtype.h"
+	"doomstat.h"
+	"v_font.h"
+	"sbar.h"
+	"r_defs.h"
+	"w_wad.h"
+	"m_random.h"
+	"d_player.h"
+	"st_stuff.h"
+	"v_video.h"
+	"r_draw.h"
+	"templates.h"
+	"a_hexenglobal.h"
+	"a_keys.h"
+
+1144769261 source:c:\dev\zdoom-2.1.4-src\src\g_hub.cpp
+	"doomstat.h"
+	"g_hub.h"
+	"tarray.h"
+	"g_level.h"
+	"g_game.h"
+	"gi.h"
+	"files.h"
+	"m_png.h"
+
+1152782276 source:c:\dev\zdoom-2.1.4-src\src\g_level.cpp
+	<assert.h>
+	"templates.h"
+	"d_main.h"
+	"m_alloc.h"
+	"g_level.h"
+	"g_game.h"
+	"s_sound.h"
+	"d_event.h"
+	"m_random.h"
+	"doomstat.h"
+	"wi_stuff.h"
+	"r_data.h"
+	"w_wad.h"
+	"am_map.h"
+	"c_dispatch.h"
+	"i_system.h"
+	"p_setup.h"
+	"p_local.h"
+	"r_sky.h"
+	"c_console.h"
+	"f_finale.h"
+	"gstrings.h"
+	"v_video.h"
+	"st_stuff.h"
+	"hu_stuff.h"
+	"p_saveg.h"
+	"p_acs.h"
+	"d_protocol.h"
+	"v_text.h"
+	"s_sndseq.h"
+	"b_bot.h"
+	"sc_man.h"
+	"sbar.h"
+	"a_lightning.h"
+	"m_png.h"
+	"m_random.h"
+	"version.h"
+	"m_menu.h"
+	"statnums.h"
+	"gi.h"
+	"g_hub.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\g_shared\a_lightning.h
+	"dthinker.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_raven\a_artitele.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"gi.h"
+	"s_sound.h"
+	"m_random.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_raven\a_minotaur.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_enemy.h"
+	"ravenshared.h"
+	"a_action.h"
+	"gi.h"
+	"w_wad.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\g_raven\a_ravenambient.cpp
+	"actor.h"
+	"info.h"
+	"s_sound.h"
+	"gi.h"
+
+1153368819 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_action.cpp
+	"actor.h"
+	"thingdef.h"
+	"p_conversation.h"
+	"p_lnspec.h"
+	"a_action.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"p_local.h"
+	"p_terrain.h"
+	"p_enemy.h"
+	"statnums.h"
+	"templates.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_artifacts.cpp
+	"info.h"
+	"a_pickups.h"
+	"d_player.h"
+	"p_local.h"
+	"c_dispatch.h"
+	"gi.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_spec.h"
+	"p_lnspec.h"
+	"p_enemy.h"
+	"p_effect.h"
+	"a_artifacts.h"
+	"sbar.h"
+	"d_player.h"
+	"m_random.h"
+	"v_video.h"
+	"templates.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_bridge.cpp
+	"actor.h"
+	"info.h"
+	"gi.h"
+	"m_random.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_camera.cpp
+	"actor.h"
+	"info.h"
+	"a_sharedglobal.h"
+	"r_main.h"
+	"p_local.h"
+	"vectors.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_debris.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+
+1150919119 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_decals.cpp
+	"actor.h"
+	"a_sharedglobal.h"
+	"r_defs.h"
+	"p_local.h"
+	"v_video.h"
+	"p_trace.h"
+	"decallib.h"
+	"statnums.h"
+	"c_dispatch.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_flashfader.cpp
+	"a_sharedglobal.h"
+	"g_level.h"
+	"d_player.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_fountain.cpp
+	"actor.h"
+	"info.h"
+	"p_effect.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_hatetarget.cpp
+	"actor.h"
+	"info.h"
+
+1147749560 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_keys.cpp
+	"a_keys.h"
+	"tarray.h"
+	"gi.h"
+	"gstrings.h"
+	"d_player.h"
+	"c_console.h"
+	"s_sound.h"
+	"sc_man.h"
+	"v_palette.h"
+	"w_wad.h"
+
+1147922726 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_lightning.cpp
+	"a_lightning.h"
+	"p_lnspec.h"
+	"statnums.h"
+	"r_data.h"
+	"m_random.h"
+	"templates.h"
+	"s_sound.h"
+	"p_acs.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_movingcamera.cpp
+	"actor.h"
+	"info.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"vectors.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_pickups.cpp
+	<assert.h>
+	"info.h"
+	"m_random.h"
+	"p_local.h"
+	"s_sound.h"
+	"gi.h"
+	"p_lnspec.h"
+	"a_hereticglobal.h"
+	"sbar.h"
+	"statnums.h"
+	"c_dispatch.h"
+	"gstrings.h"
+	"templates.h"
+	"a_strifeglobal.h"
+
+1152573645 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_quake.cpp
+	"templates.h"
+	"doomtype.h"
+	"doomstat.h"
+	"p_local.h"
+	"actor.h"
+	"m_bbox.h"
+	"m_random.h"
+	"s_sound.h"
+	"a_sharedglobal.h"
+	"statnums.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_secrettrigger.cpp
+	"actor.h"
+	"g_level.h"
+	"c_console.h"
+	"info.h"
+	"s_sound.h"
+	"d_player.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_sectoraction.cpp
+	"r_defs.h"
+	"p_lnspec.h"
+
+1147520475 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_sharedmisc.cpp
+	"actor.h"
+	"info.h"
+	"gi.h"
+	"a_sharedglobal.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_skies.cpp
+	"actor.h"
+	"a_sharedglobal.h"
+	"p_local.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_soundenvironment.cpp
+	"info.h"
+	"r_defs.h"
+	"s_sound.h"
+	"r_state.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_soundsequence.cpp
+	<stddef.h>
+	"actor.h"
+	"info.h"
+	"s_sound.h"
+	"m_random.h"
+	"s_sndseq.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_spark.cpp
+	"actor.h"
+	"info.h"
+	"m_random.h"
+	"p_effect.h"
+	"s_sound.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_waterzone.cpp
+	"info.h"
+	"r_defs.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_weaponpiece.cpp
+	"a_pickups.h"
+	"a_weaponpiece.h"
+	"doomstat.h"
+
+1147225243 c:\dev\zdoom-2.1.4-src\src\g_shared\a_weaponpiece.h
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_shared\a_weapons.cpp
+	<string.h>
+	"a_pickups.h"
+	"gi.h"
+	"d_player.h"
+	"s_sound.h"
+	"i_system.h"
+	"r_state.h"
+	"p_pspr.h"
+	"c_dispatch.h"
+	"m_misc.h"
+	"gameconfigfile.h"
+	"cmdlib.h"
+	"templates.h"
+	"sbar.h"
+
+1151630006 source:c:\dev\zdoom-2.1.4-src\src\g_shared\hudmessages.cpp
+	"templates.h"
+	"doomdef.h"
+	"sbar.h"
+	"c_cvars.h"
+	"v_video.h"
+	"cmdlib.h"
+
+1152471845 source:c:\dev\zdoom-2.1.4-src\src\g_shared\shared_sbar.cpp
+	<assert.h>
+	"templates.h"
+	"sbar.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"c_console.h"
+	"v_video.h"
+	"m_swap.h"
+	"r_draw.h"
+	"w_wad.h"
+	"v_text.h"
+	"s_sound.h"
+	"gi.h"
+	"p_effect.h"
+	"../version.h"
+
+1144774971 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_acolyte.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"a_strifeglobal.h"
+	"doomdata.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_alienspectres.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"m_random.h"
+	"a_strifeglobal.h"
+	"c_console.h"
+	"gstrings.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_coin.cpp
+	"a_pickups.h"
+	"a_strifeglobal.h"
+	"gstrings.h"
+
+1144943544 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_crusader.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"a_strifeglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_entityboss.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"a_strifeglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_inquisitor.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_loremaster.cpp
+	"actor.h"
+	"a_action.h"
+	"a_strifeglobal.h"
+	"m_random.h"
+	"p_enemy.h"
+	"p_local.h"
+	"s_sound.h"
+	"vectors.h"
+
+1147551728 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_macil.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"a_strifeglobal.h"
+
+1147551728 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_oracle.cpp
+	"actor.h"
+	"a_action.h"
+	"a_strifeglobal.h"
+	"p_enemy.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_programmer.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"a_strifeglobal.h"
+	"f_finale.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_reaver.cpp
+	"actor.h"
+	"p_enemy.h"
+	"a_action.h"
+	"s_sound.h"
+	"m_random.h"
+	"p_local.h"
+	"a_strifeglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_rebels.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"gi.h"
+	"a_sharedglobal.h"
+	"a_strifeglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_sentinel.cpp
+	"actor.h"
+	"p_enemy.h"
+	"a_action.h"
+	"p_local.h"
+	"m_random.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_spectral.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"m_random.h"
+	"a_strifeglobal.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_stalker.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+
+1144943544 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_strifebishop.cpp
+	"actor.h"
+	"p_enemy.h"
+	"a_action.h"
+	"s_sound.h"
+	"p_local.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_strifeitems.cpp
+	"info.h"
+	"a_pickups.h"
+	"d_player.h"
+	"gstrings.h"
+	"p_local.h"
+	"p_spec.h"
+	"a_strifeglobal.h"
+	"p_lnspec.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"d_event.h"
+	"a_keys.h"
+	"c_console.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_strifeplayer.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"a_doomglobal.h"
+	"templates.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_strifestuff.cpp
+	"actor.h"
+	"gi.h"
+	"m_random.h"
+	"s_sound.h"
+	"d_player.h"
+	"a_action.h"
+	"p_local.h"
+	"a_doomglobal.h"
+	"a_strifeglobal.h"
+	"p_enemy.h"
+	"p_lnspec.h"
+	"c_console.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_strifeweapons.cpp
+	"a_pickups.h"
+	"p_local.h"
+	"m_random.h"
+	"a_strifeglobal.h"
+	"s_sound.h"
+	"p_enemy.h"
+	"templates.h"
+
+1144943544 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_templar.cpp
+	"actor.h"
+	"m_random.h"
+	"a_action.h"
+	"p_local.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"a_strifeglobal.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_strife\a_thingstoblowup.cpp
+	"actor.h"
+	"m_random.h"
+	"p_local.h"
+	"c_console.h"
+	"p_enemy.h"
+	"a_action.h"
+	"gstrings.h"
+
+1150572581 source:c:\dev\zdoom-2.1.4-src\src\g_strife\strife_sbar.cpp
+	"doomtype.h"
+	"doomstat.h"
+	"v_font.h"
+	"v_video.h"
+	"sbar.h"
+	"r_defs.h"
+	"w_wad.h"
+	"m_random.h"
+	"d_player.h"
+	"st_stuff.h"
+	"r_local.h"
+	"m_swap.h"
+	"templates.h"
+	"a_keys.h"
+	"a_strifeglobal.h"
+	"gi.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\gameconfigfile.cpp
+	<stdio.h>
+	<time.h>
+	<windows.h>
+	<lmcons.h>
+	<shlobj.h>
+	"doomdef.h"
+	"gameconfigfile.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"c_bind.h"
+	"gstrings.h"
+	"m_argv.h"
+	"cmdlib.h"
+	"version.h"
+	"m_misc.h"
+	"v_font.h"
+	"a_pickups.h"
+	"doomstat.h"
+	"i_system.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\gi.cpp
+	<stdlib.h>
+	"info.h"
+	"gi.h"
+	"m_fixed.h"
+
+1152782276 source:c:\dev\zdoom-2.1.4-src\src\hu_scores.cpp
+	<string.h>
+	<ctype.h>
+	"doomdef.h"
+	"m_swap.h"
+	"hu_stuff.h"
+	"w_wad.h"
+	"s_sound.h"
+	"doomstat.h"
+	"st_stuff.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"c_cvars.h"
+	"v_text.h"
+	"v_video.h"
+	"gi.h"
+	"d_gui.h"
+	"i_input.h"
+	"templates.h"
+
+1151630006 source:c:\dev\zdoom-2.1.4-src\src\i_net.cpp
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<windows.h>
+	<winsock.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<errno.h>
+	<unistd.h>
+	<netdb.h>
+	<sys/ioctl.h>
+	"doomtype.h"
+	"i_system.h"
+	"d_event.h"
+	"d_net.h"
+	"m_argv.h"
+	"m_alloc.h"
+	"m_swap.h"
+	"m_crc32.h"
+	"d_player.h"
+	"templates.h"
+	"c_console.h"
+	"doomstat.h"
+	"i_net.h"
+
+1153058410 source:c:\dev\zdoom-2.1.4-src\src\info.cpp
+	"info.h"
+	"m_fixed.h"
+	"c_dispatch.h"
+	"autosegs.h"
+	"gi.h"
+	"actor.h"
+	"r_state.h"
+	"i_system.h"
+	"p_local.h"
+
+1152782276 source:c:\dev\zdoom-2.1.4-src\src\infodefaults.cpp
+	<assert.h>
+	"actor.h"
+	"info.h"
+	"s_sound.h"
+	"p_conversation.h"
+	"a_pickups.h"
+	"gi.h"
+	"a_artifacts.h"
+	"a_keys.h"
+	"i_system.h"
+	"r_data.h"
+	"w_wad.h"
+	"a_strifeglobal.h"
+	"thingdef.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\lumpconfigfile.cpp
+	<string.h>
+	<stdio.h>
+	"doomtype.h"
+	"lumpconfigfile.h"
+	"w_wad.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\lumpconfigfile.h
+	"configfile.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\m_alloc.cpp
+	"i_system.h"
+	"m_alloc.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\m_argv.cpp
+	<string.h>
+	"m_argv.h"
+	"cmdlib.h"
+
+1144740983 source:c:\dev\zdoom-2.1.4-src\src\m_bbox.cpp
+	"m_bbox.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\m_cheat.cpp
+	<stdlib.h>
+	<math.h>
+	"m_cheat.h"
+	"d_player.h"
+	"doomstat.h"
+	"gstrings.h"
+	"p_local.h"
+	"a_doomglobal.h"
+	"a_strifeglobal.h"
+	"gi.h"
+	"p_enemy.h"
+	"sbar.h"
+	"c_dispatch.h"
+	"v_video.h"
+	"w_wad.h"
+	"a_keys.h"
+	"templates.h"
+	"p_lnspec.h"
+
+1153903817 source:c:\dev\zdoom-2.1.4-src\src\m_menu.cpp
+	<ctype.h>
+	<fcntl.h>
+	<stdlib.h>
+	<zlib.h>
+	<io.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/stat.h>
+	"doomdef.h"
+	"gstrings.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"d_main.h"
+	"i_system.h"
+	"i_video.h"
+	"v_video.h"
+	"w_wad.h"
+	"r_local.h"
+	"hu_stuff.h"
+	"g_game.h"
+	"m_argv.h"
+	"m_swap.h"
+	"m_random.h"
+	"s_sound.h"
+	"doomstat.h"
+	"m_menu.h"
+	"v_text.h"
+	"st_stuff.h"
+	"d_gui.h"
+	"version.h"
+	"m_png.h"
+	"templates.h"
+	"lists.h"
+	"gi.h"
+	"p_tick.h"
+
+1152752919 source:c:\dev\zdoom-2.1.4-src\src\m_misc.cpp
+	<sys/stat.h>
+	<sys/types.h>
+	<fcntl.h>
+	<stdlib.h>
+	<errno.h>
+	<malloc.h>
+	"doomtype.h"
+	"version.h"
+	<io.h>
+	<unistd.h>
+	<ctype.h>
+	"m_alloc.h"
+	"doomdef.h"
+	"m_swap.h"
+	"m_argv.h"
+	"w_wad.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"c_bind.h"
+	"i_system.h"
+	"i_video.h"
+	"v_video.h"
+	"hu_stuff.h"
+	"doomstat.h"
+	"m_misc.h"
+	"m_png.h"
+	"cmdlib.h"
+	"g_game.h"
+	"gi.h"
+	"gameconfigfile.h"
+
+1152752919 source:c:\dev\zdoom-2.1.4-src\src\m_options.cpp
+	"m_alloc.h"
+	"templates.h"
+	"doomdef.h"
+	"gstrings.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"c_bind.h"
+	"d_main.h"
+	"d_gui.h"
+	"i_system.h"
+	"i_video.h"
+	"i_music.h"
+	"i_input.h"
+	"v_video.h"
+	"v_text.h"
+	"w_wad.h"
+	"gi.h"
+	"r_local.h"
+	"gameconfigfile.h"
+	"hu_stuff.h"
+	"g_game.h"
+	"m_argv.h"
+	"m_swap.h"
+	"s_sound.h"
+	"doomstat.h"
+	"m_misc.h"
+	"m_menu.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\sound\i_music.h
+	"doomdef.h"
+	"doomstat.h"
+	"files.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\m_png.cpp
+	<stdlib.h>
+	<stdio.h>
+	<zlib.h>
+	<malloc.h>
+	"m_crc32.h"
+	"m_swap.h"
+	"c_cvars.h"
+	"v_video.h"
+	"m_png.h"
+	"templates.h"
+	"files.h"
+
+1148614702 source:c:\dev\zdoom-2.1.4-src\src\m_random.cpp
+	<assert.h>
+	"doomstat.h"
+	"m_random.h"
+	"farchive.h"
+	"b_bot.h"
+	"m_png.h"
+	"m_crc32.h"
+	"i_system.h"
+	"c_dispatch.h"
+	"files.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\misc.nas
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\mus2midi.cpp
+	<string.h>
+	"m_swap.h"
+	"mus2midi.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\mus2midi.h
+	<stdio.h>
+	"doomtype.h"
+
+1147225243 source:c:\dev\zdoom-2.1.4-src\src\name.cpp
+	<string.h>
+	"name.h"
+	"c_dispatch.h"
+	"m_alloc.h"
+	"namedef.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\nodebuild.cpp
+	<stdlib.h>
+	<assert.h>
+	<malloc.h>
+	<string.h>
+	<stdio.h>
+	<math.h>
+	"doomdata.h"
+	"nodebuild.h"
+	"templates.h"
+	"tarray.h"
+	"m_bbox.h"
+	"c_console.h"
+	"r_main.h"
+
+1149626348 c:\dev\zdoom-2.1.4-src\src\nodebuild.h
+	"doomdata.h"
+	"tarray.h"
+	"r_defs.h"
+
+1149626348 source:c:\dev\zdoom-2.1.4-src\src\nodebuild_classify_nosse2.cpp
+	"doomtype.h"
+	"nodebuild.h"
+
+1149626348 source:c:\dev\zdoom-2.1.4-src\src\nodebuild_classify_sse2.cpp
+	"doomtype.h"
+	"nodebuild.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\nodebuild_events.cpp
+	<string.h>
+	"doomtype.h"
+	"nodebuild.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\nodebuild_extract.cpp
+	<string.h>
+	<float.h>
+	"nodebuild.h"
+	"templates.h"
+	"r_main.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\nodebuild_gl.cpp
+	"doomtype.h"
+	"nodebuild.h"
+	"r_main.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\nodebuild_utility.cpp
+	<stdlib.h>
+	<malloc.h>
+	<string.h>
+	<stdio.h>
+	"nodebuild.h"
+	"templates.h"
+	"m_bbox.h"
+	"r_main.h"
+	"i_system.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\oplsynth\fmopl.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<math.h>
+	"fmopl.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\oplsynth\fmopl.h
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\oplsynth\mlkernel.cpp
+	"muslib.h"
+
+1148258047 c:\dev\zdoom-2.1.4-src\src\oplsynth\muslib.h
+	"deftypes.h"
+	"files.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\oplsynth\deftypes.h
+	"doomtype.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\oplsynth\mlopl.cpp
+	<malloc.h>
+	<string.h>
+	<io.h>
+	"muslib.h"
+	"c_cvars.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\oplsynth\mlopl_io.cpp
+	<dos.h>
+	<conio.h>
+	"muslib.h"
+	"fmopl.h"
+
+1150727470 source:c:\dev\zdoom-2.1.4-src\src\oplsynth\opl_mus_player.cpp
+	<io.h>
+	<string.h>
+	<assert.h>
+	"doomtype.h"
+	"fmopl.h"
+	"opl_mus_player.h"
+	"w_wad.h"
+	"templates.h"
+	"c_cvars.h"
+	"i_system.h"
+	"stats.h"
+	"v_text.h"
+	"c_dispatch.h"
+
+1145015932 c:\dev\zdoom-2.1.4-src\src\oplsynth\opl_mus_player.h
+	<windows.h>
+	<SDL.h>
+	"muslib.h"
+	"files.h"
+
+1153077204 source:c:\dev\zdoom-2.1.4-src\src\p_acs.cpp
+	<assert.h>
+	"templates.h"
+	"doomdef.h"
+	"p_local.h"
+	"p_spec.h"
+	"g_level.h"
+	"s_sound.h"
+	"p_acs.h"
+	"p_saveg.h"
+	"p_lnspec.h"
+	"m_random.h"
+	"doomstat.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"s_sndseq.h"
+	"i_system.h"
+	"i_movie.h"
+	"sbar.h"
+	"vectors.h"
+	"m_swap.h"
+	"a_sharedglobal.h"
+	"a_doomglobal.h"
+	"a_strifeglobal.h"
+	"v_video.h"
+	"w_wad.h"
+	"r_sky.h"
+	"gstrings.h"
+	"gi.h"
+	"sc_man.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\i_movie.h
+
+1150338679 source:c:\dev\zdoom-2.1.4-src\src\p_buildmap.cpp
+	"p_local.h"
+	"m_swap.h"
+	"v_palette.h"
+	"w_wad.h"
+	"templates.h"
+	"vectors.h"
+	"r_sky.h"
+	"r_main.h"
+	"r_defs.h"
+
+1145578975 source:c:\dev\zdoom-2.1.4-src\src\p_ceiling.cpp
+	"m_alloc.h"
+	"doomdef.h"
+	"p_local.h"
+	"s_sound.h"
+	"s_sndseq.h"
+	"doomstat.h"
+	"r_state.h"
+	"gi.h"
+
+1154132784 source:c:\dev\zdoom-2.1.4-src\src\p_conversation.cpp
+	<assert.h>
+	"actor.h"
+	"r_data.h"
+	"p_conversation.h"
+	"w_wad.h"
+	"cmdlib.h"
+	"s_sound.h"
+	"m_menu.h"
+	"v_text.h"
+	"v_video.h"
+	"m_random.h"
+	"gi.h"
+	"templates.h"
+	"a_strifeglobal.h"
+	"a_keys.h"
+	"p_enemy.h"
+	"gstrings.h"
+	"sound/i_music.h"
+
+1149334211 source:c:\dev\zdoom-2.1.4-src\src\p_doors.cpp
+	"doomdef.h"
+	"p_local.h"
+	"s_sound.h"
+	"s_sndseq.h"
+	"doomstat.h"
+	"r_state.h"
+	"c_console.h"
+	"gi.h"
+	"a_keys.h"
+	"i_system.h"
+	"sc_man.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\p_effect.cpp
+	"doomtype.h"
+	"doomstat.h"
+	"c_cvars.h"
+	"actor.h"
+	"p_effect.h"
+	"p_local.h"
+	"g_level.h"
+	"v_video.h"
+	"m_random.h"
+	"r_defs.h"
+	"r_things.h"
+	"s_sound.h"
+	"templates.h"
+
+1153058410 source:c:\dev\zdoom-2.1.4-src\src\p_enemy.cpp
+	<stdlib.h>
+	"templates.h"
+	"m_random.h"
+	"m_alloc.h"
+	"i_system.h"
+	"doomdef.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"p_effect.h"
+	"s_sound.h"
+	"g_game.h"
+	"doomstat.h"
+	"r_state.h"
+	"c_cvars.h"
+	"p_enemy.h"
+	"a_sharedglobal.h"
+	"a_doomglobal.h"
+	"a_action.h"
+	"gi.h"
+
+1149334211 source:c:\dev\zdoom-2.1.4-src\src\p_floor.cpp
+	"doomdef.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"s_sound.h"
+	"s_sndseq.h"
+	"doomstat.h"
+	"r_state.h"
+	"tables.h"
+
+1152860657 source:c:\dev\zdoom-2.1.4-src\src\p_interaction.cpp
+	"doomdef.h"
+	"gstrings.h"
+	"doomstat.h"
+	"m_random.h"
+	"i_system.h"
+	"announcer.h"
+	"am_map.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"p_effect.h"
+	"p_acs.h"
+	"b_bot.h"
+	"a_doomglobal.h"
+	"a_hereticglobal.h"
+	"ravenshared.h"
+	"a_hexenglobal.h"
+	"a_sharedglobal.h"
+	"a_pickups.h"
+	"gi.h"
+	"templates.h"
+	"sbar.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\announcer.h
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\p_lights.cpp
+	"templates.h"
+	"m_random.h"
+	"doomdef.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"r_state.h"
+	"statnums.h"
+
+1154132784 source:c:\dev\zdoom-2.1.4-src\src\p_lnspec.cpp
+	"doomstat.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"p_enemy.h"
+	"g_level.h"
+	"v_palette.h"
+	"tables.h"
+	"i_system.h"
+	"a_sharedglobal.h"
+	"a_lightning.h"
+	"statnums.h"
+	"s_sound.h"
+	"templates.h"
+	"a_keys.h"
+	"gi.h"
+	"m_random.h"
+	"p_conversation.h"
+	"a_strifeglobal.h"
+
+1154132784 source:c:\dev\zdoom-2.1.4-src\src\p_map.cpp
+	<stdlib.h>
+	<math.h>
+	"templates.h"
+	"vectors.h"
+	"m_alloc.h"
+	"m_bbox.h"
+	"m_random.h"
+	"i_system.h"
+	"doomdef.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"p_effect.h"
+	"p_terrain.h"
+	"p_trace.h"
+	"s_sound.h"
+	"decallib.h"
+	"doomstat.h"
+	"r_state.h"
+	"gi.h"
+	"a_sharedglobal.h"
+	"a_doomglobal.h"
+	"p_conversation.h"
+
+1147225243 source:c:\dev\zdoom-2.1.4-src\src\p_maputl.cpp
+	<stdlib.h>
+	"m_bbox.h"
+	"doomdef.h"
+	"doomstat.h"
+	"p_local.h"
+	"r_state.h"
+	"templates.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\p_mobj.cpp
+	"templates.h"
+	"m_alloc.h"
+	"i_system.h"
+	"m_random.h"
+	"doomdef.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"p_effect.h"
+	"p_terrain.h"
+	"st_stuff.h"
+	"hu_stuff.h"
+	"s_sound.h"
+	"doomstat.h"
+	"v_video.h"
+	"c_cvars.h"
+	"b_bot.h"
+	"stats.h"
+	"a_doomglobal.h"
+	"a_hexenglobal.h"
+	"a_sharedglobal.h"
+	"gi.h"
+	"sbar.h"
+	"p_acs.h"
+	"cmdlib.h"
+	"decallib.h"
+	"ravenshared.h"
+	"a_action.h"
+	"a_keys.h"
+	"p_conversation.h"
+	"thingdef.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\p_pillar.cpp
+	"doomdef.h"
+	"p_local.h"
+	"p_spec.h"
+	"g_level.h"
+	"s_sndseq.h"
+
+1145578975 source:c:\dev\zdoom-2.1.4-src\src\p_plats.cpp
+	"m_alloc.h"
+	"i_system.h"
+	"m_random.h"
+	"doomdef.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"s_sndseq.h"
+	"doomstat.h"
+	"r_state.h"
+	"gi.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\p_pspr.cpp
+	<stdlib.h>
+	"doomdef.h"
+	"d_event.h"
+	"c_cvars.h"
+	"m_random.h"
+	"p_local.h"
+	"s_sound.h"
+	"doomstat.h"
+	"gi.h"
+	"p_pspr.h"
+	"p_effect.h"
+	"a_doomglobal.h"
+	"templates.h"
+	"thingdef.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\p_saveg.cpp
+	"i_system.h"
+	"p_local.h"
+	"dobject.h"
+	"doomstat.h"
+	"r_state.h"
+	"m_random.h"
+	"p_saveg.h"
+	"p_acs.h"
+	"s_sndseq.h"
+	"v_palette.h"
+	"a_sharedglobal.h"
+
+1149334211 source:c:\dev\zdoom-2.1.4-src\src\p_sectors.cpp
+	"r_data.h"
+	"p_spec.h"
+	"c_cvars.h"
+
+1153368819 source:c:\dev\zdoom-2.1.4-src\src\p_setup.cpp
+	<math.h>
+	<malloc.h>
+	"templates.h"
+	"m_alloc.h"
+	"m_argv.h"
+	"m_swap.h"
+	"m_bbox.h"
+	"g_game.h"
+	"i_system.h"
+	"w_wad.h"
+	"doomdef.h"
+	"p_local.h"
+	"p_effect.h"
+	"p_terrain.h"
+	"nodebuild.h"
+	"s_sound.h"
+	"doomstat.h"
+	"p_lnspec.h"
+	"v_palette.h"
+	"c_console.h"
+	"p_acs.h"
+	"vectors.h"
+	"announcer.h"
+	"wi_stuff.h"
+	"stats.h"
+	"doomerrors.h"
+	"gi.h"
+	"p_conversation.h"
+	"a_keys.h"
+	"s_sndseq.h"
+	"sbar.h"
+	"p_setup.h"
+	"c_dispatch.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\p_sight.cpp
+	<assert.h>
+	"doomdef.h"
+	"i_system.h"
+	"p_local.h"
+	"m_random.h"
+	"m_bbox.h"
+	"p_lnspec.h"
+	"r_state.h"
+	"stats.h"
+
+1147912970 source:c:\dev\zdoom-2.1.4-src\src\p_spec.cpp
+	"m_alloc.h"
+	<stdlib.h>
+	"templates.h"
+	"doomdef.h"
+	"doomstat.h"
+	"gstrings.h"
+	"i_system.h"
+	"m_argv.h"
+	"m_random.h"
+	"m_bbox.h"
+	"w_wad.h"
+	"r_local.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"p_terrain.h"
+	"p_acs.h"
+	"g_game.h"
+	"s_sound.h"
+	"sc_man.h"
+	"gi.h"
+	"statnums.h"
+	"r_state.h"
+	"c_console.h"
+	"r_sky.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\p_switch.cpp
+	"templates.h"
+	"i_system.h"
+	"doomdef.h"
+	"p_local.h"
+	"p_lnspec.h"
+	"m_random.h"
+	"g_game.h"
+	"s_sound.h"
+	"doomstat.h"
+	"r_state.h"
+	"w_wad.h"
+	"tarray.h"
+	"cmdlib.h"
+	"sc_man.h"
+	"gi.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\p_teleport.cpp
+	"templates.h"
+	"doomtype.h"
+	"doomdef.h"
+	"s_sound.h"
+	"p_local.h"
+	"p_terrain.h"
+	"r_state.h"
+	"gi.h"
+	"a_sharedglobal.h"
+	"m_random.h"
+	"i_system.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\p_terrain.cpp
+	<string.h>
+	"doomtype.h"
+	"cmdlib.h"
+	"p_terrain.h"
+	"gi.h"
+	"r_state.h"
+	"w_wad.h"
+	"sc_man.h"
+	"s_sound.h"
+	"p_local.h"
+	"templates.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\p_things.cpp
+	"doomtype.h"
+	"p_local.h"
+	"p_effect.h"
+	"info.h"
+	"s_sound.h"
+	"tables.h"
+	"doomstat.h"
+	"m_random.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"a_sharedglobal.h"
+	"gi.h"
+	"templates.h"
+
+1148173816 source:c:\dev\zdoom-2.1.4-src\src\p_tick.cpp
+	"p_local.h"
+	"p_effect.h"
+	"p_acs.h"
+	"c_console.h"
+	"b_bot.h"
+	"s_sound.h"
+	"doomstat.h"
+	"sbar.h"
+
+1150886847 source:c:\dev\zdoom-2.1.4-src\src\p_trace.cpp
+	"p_trace.h"
+	"p_local.h"
+	"i_system.h"
+
+1153041794 source:c:\dev\zdoom-2.1.4-src\src\p_user.cpp
+	"templates.h"
+	"doomdef.h"
+	"d_event.h"
+	"p_local.h"
+	"doomstat.h"
+	"s_sound.h"
+	"i_system.h"
+	"r_draw.h"
+	"gi.h"
+	"m_random.h"
+	"p_pspr.h"
+	"p_enemy.h"
+	"p_effect.h"
+	"s_sound.h"
+	"a_sharedglobal.h"
+	"a_keys.h"
+	"statnums.h"
+	"v_palette.h"
+	"v_video.h"
+	"w_wad.h"
+	"cmdlib.h"
+	"sbar.h"
+	"f_finale.h"
+	"c_console.h"
+	"doomdef.h"
+	"c_dispatch.h"
+	"tarray.h"
+	"thingdef.h"
+
+1144807438 source:c:\dev\zdoom-2.1.4-src\src\p_writemap.cpp
+	"p_local.h"
+	"c_dispatch.h"
+	"gi.h"
+	"w_wad.h"
+	"r_defs.h"
+	"m_swap.h"
+
+1150886847 source:c:\dev\zdoom-2.1.4-src\src\p_xlat.cpp
+	"doomtype.h"
+	"g_level.h"
+	"p_lnspec.h"
+	"doomdata.h"
+	"r_data.h"
+	"m_swap.h"
+	"p_spec.h"
+	"p_local.h"
+	"a_sharedglobal.h"
+	"gi.h"
+	"w_wad.h"
+
+1146958042 source:c:\dev\zdoom-2.1.4-src\src\po_man.cpp
+	"doomdef.h"
+	"p_local.h"
+	"r_local.h"
+	"i_system.h"
+	"w_wad.h"
+	"m_swap.h"
+	"m_bbox.h"
+	"tables.h"
+	"s_sndseq.h"
+	"a_sharedglobal.h"
+	"r_main.h"
+
+1148085271 source:c:\dev\zdoom-2.1.4-src\src\r_anim.cpp
+	"cmdlib.h"
+	"i_system.h"
+	"r_local.h"
+	"r_sky.h"
+	"m_random.h"
+	"d_player.h"
+	"p_spec.h"
+	"sc_man.h"
+	"templates.h"
+	"w_wad.h"
+
+1152589690 source:c:\dev\zdoom-2.1.4-src\src\r_bsp.cpp
+	<stdlib.h>
+	"templates.h"
+	"m_alloc.h"
+	"doomdef.h"
+	"m_bbox.h"
+	"i_system.h"
+	"p_lnspec.h"
+	"r_main.h"
+	"r_plane.h"
+	"r_draw.h"
+	"r_things.h"
+	"a_sharedglobal.h"
+	"doomstat.h"
+	"r_state.h"
+	"r_bsp.h"
+	"v_palette.h"
+
+1150727470 source:c:\dev\zdoom-2.1.4-src\src\r_data.cpp
+	<stddef.h>
+	<malloc.h>
+	"i_system.h"
+	"m_alloc.h"
+	"m_swap.h"
+	"m_png.h"
+	"w_wad.h"
+	"doomdef.h"
+	"r_local.h"
+	"p_local.h"
+	"doomstat.h"
+	"r_sky.h"
+	"c_dispatch.h"
+	"c_console.h"
+	"r_data.h"
+	"v_palette.h"
+	"v_video.h"
+	"gi.h"
+	"cmdlib.h"
+	"templates.h"
+
+1154132784 source:c:\dev\zdoom-2.1.4-src\src\r_draw.cpp
+	<stddef.h>
+	"templates.h"
+	"m_alloc.h"
+	"doomdef.h"
+	"i_system.h"
+	"w_wad.h"
+	"r_local.h"
+	"v_video.h"
+	"doomstat.h"
+	"st_stuff.h"
+	"a_hexenglobal.h"
+	"g_game.h"
+	"gi.h"
+	"stats.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\r_drawt.cpp
+	"templates.h"
+	"doomtype.h"
+	"doomdef.h"
+	"r_defs.h"
+	"r_draw.h"
+	"r_main.h"
+	"r_things.h"
+	"v_video.h"
+
+1151709696 source:c:\dev\zdoom-2.1.4-src\src\r_main.cpp
+	<stdlib.h>
+	<math.h>
+	"templates.h"
+	"m_alloc.h"
+	"doomdef.h"
+	"d_net.h"
+	"doomstat.h"
+	"m_random.h"
+	"m_bbox.h"
+	"p_local.h"
+	"r_local.h"
+	"r_sky.h"
+	"st_stuff.h"
+	"c_cvars.h"
+	"v_video.h"
+	"stats.h"
+	"i_video.h"
+	"i_system.h"
+	"vectors.h"
+	"a_sharedglobal.h"
+
+1152671755 source:c:\dev\zdoom-2.1.4-src\src\r_plane.cpp
+	<stdlib.h>
+	<float.h>
+	"templates.h"
+	"i_system.h"
+	"w_wad.h"
+	"doomdef.h"
+	"doomstat.h"
+	"r_local.h"
+	"r_sky.h"
+	"stats.h"
+	"m_alloc.h"
+	"v_video.h"
+	"vectors.h"
+	"a_sharedglobal.h"
+
+1145578975 source:c:\dev\zdoom-2.1.4-src\src\r_polymost.cpp
+	<stdlib.h>
+	<assert.h>
+	<math.h>
+	"doomtype.h"
+	"r_polymost.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"r_main.h"
+	"r_draw.h"
+	"templates.h"
+	"d_event.h"
+	"p_lnspec.h"
+
+1152671755 source:c:\dev\zdoom-2.1.4-src\src\r_segs.cpp
+	"m_alloc.h"
+	<stdlib.h>
+	<stddef.h>
+	"templates.h"
+	"i_system.h"
+	"doomdef.h"
+	"doomstat.h"
+	"p_lnspec.h"
+	"r_local.h"
+	"r_sky.h"
+	"v_video.h"
+	"m_swap.h"
+	"w_wad.h"
+	"stats.h"
+	"a_sharedglobal.h"
+
+1152589690 source:c:\dev\zdoom-2.1.4-src\src\r_sky.cpp
+	"m_fixed.h"
+	"r_data.h"
+	"c_cvars.h"
+	"g_level.h"
+	"r_sky.h"
+	"r_main.h"
+	"v_text.h"
+	"gi.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\r_things.cpp
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+	"templates.h"
+	"m_alloc.h"
+	"doomdef.h"
+	"m_swap.h"
+	"m_argv.h"
+	"i_system.h"
+	"w_wad.h"
+	"r_local.h"
+	"p_effect.h"
+	"c_console.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"doomstat.h"
+	"v_video.h"
+	"sc_man.h"
+	"s_sound.h"
+	"sbar.h"
+	"gi.h"
+
+1153260551 source:c:\dev\zdoom-2.1.4-src\src\s_advsound.cpp
+	"templates.h"
+	"actor.h"
+	"a_sharedglobal.h"
+	"s_sound.h"
+	"c_dispatch.h"
+	"w_wad.h"
+	"sc_man.h"
+	"g_level.h"
+	"cmdlib.h"
+	"gi.h"
+	"doomstat.h"
+	"i_sound.h"
+	"r_data.h"
+	"m_random.h"
+	"d_netinf.h"
+	"i_system.h"
+
+1147400080 source:c:\dev\zdoom-2.1.4-src\src\s_environment.cpp
+	"doomtype.h"
+	"tarray.h"
+	"s_sound.h"
+	"farchive.h"
+	"sc_man.h"
+	"cmdlib.h"
+	"templates.h"
+	"w_wad.h"
+	"i_system.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\s_playlist.cpp
+	<stdlib.h>
+	"cmdlib.h"
+	"s_playlist.h"
+	"templates.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\s_playlist.h
+
+1147316458 source:c:\dev\zdoom-2.1.4-src\src\s_sndseq.cpp
+	<string.h>
+	<stdio.h>
+	"doomtype.h"
+	"doomstat.h"
+	"sc_man.h"
+	"m_alloc.h"
+	"m_random.h"
+	"s_sound.h"
+	"s_sndseq.h"
+	"w_wad.h"
+	"i_system.h"
+	"cmdlib.h"
+	"p_local.h"
+	"gi.h"
+	"templates.h"
+	"c_dispatch.h"
+
+1150727470 source:c:\dev\zdoom-2.1.4-src\src\s_sound.cpp
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<fcntl.h>
+	"m_alloc.h"
+	"i_system.h"
+	"i_sound.h"
+	"i_music.h"
+	"i_cd.h"
+	"s_sound.h"
+	"s_sndseq.h"
+	"s_playlist.h"
+	"c_dispatch.h"
+	"m_random.h"
+	"w_wad.h"
+	"doomdef.h"
+	"p_local.h"
+	"doomstat.h"
+	"cmdlib.h"
+	"v_video.h"
+	"v_text.h"
+	"a_sharedglobal.h"
+	"gstrings.h"
+	"vectors.h"
+	"gi.h"
+	"templates.h"
+	"zstring.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\i_cd.h
+
+1152321455 source:c:\dev\zdoom-2.1.4-src\src\sc_man.cpp
+	<string.h>
+	<stdlib.h>
+	"doomtype.h"
+	"i_system.h"
+	"sc_man.h"
+	"w_wad.h"
+	"cmdlib.h"
+	"m_misc.h"
+	"templates.h"
+	"sc_man_scanner.h"
+
+1150928537 c:\dev\zdoom-2.1.4-src\src\sc_man_scanner.h
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\skins.cpp
+
+1150727470 source:c:\dev\zdoom-2.1.4-src\src\sound\altsound.cpp
+	<windows.h>
+	<mmsystem.h>
+	<dsound.h>
+	<malloc.h>
+	<assert.h>
+	"altsound.h"
+	"doomtype.h"
+	"c_cvars.h"
+	"templates.h"
+	"i_system.h"
+	"i_music.h"
+	"s_sound.h"
+	"w_wad.h"
+	"m_swap.h"
+	"sample_flac.h"
+	"stats.h"
+
+972084476 c:\dev\dx80_mgw\include\dsound.h
+	<objbase.h>
+	<float.h>
+
+1148354749 c:\dev\zdoom-2.1.4-src\src\sound\altsound.h
+	<windows.h>
+	<mmsystem.h>
+	<dsound.h>
+	"i_sound.h"
+
+1145015932 c:\dev\zdoom-2.1.4-src\src\sound\sample_flac.h
+	<fmod.h>
+	<FLAC++/decoder.h>
+	"s_sound.h"
+	"files.h"
+	"w_wad.h"
+
+1130489930 c:\dev\fmodapi375win\api\inc\fmod.h
+
+1144963121 c:\dev\zdoom-2.1.4-src\flac\flac++\decoder.h
+	"export.h"
+	"FLAC/stream_decoder.h"
+
+1144963121 c:\dev\zdoom-2.1.4-src\flac\flac++\export.h
+
+1144963121 c:\dev\zdoom-2.1.4-src\flac\flac\stream_decoder.h
+	"export.h"
+	"format.h"
+
+1144963121 c:\dev\zdoom-2.1.4-src\flac\flac\export.h
+
+1144963121 c:\dev\zdoom-2.1.4-src\flac\flac\format.h
+	"export.h"
+	"ordinals.h"
+
+1144963121 c:\dev\zdoom-2.1.4-src\flac\flac\ordinals.h
+	<inttypes.h>
+
+1144964156 source:c:\dev\zdoom-2.1.4-src\src\sound\altsoundmixer.cpp
+	"altsound.h"
+	"c_cvars.h"
+
+1151630006 source:c:\dev\zdoom-2.1.4-src\src\sound\fmodsound.cpp
+	<windows.h>
+	<mmsystem.h>
+	"resource.h"
+	"templates.h"
+	"fmodsound.h"
+	"c_cvars.h"
+	"i_system.h"
+	"gi.h"
+	"actor.h"
+	"r_state.h"
+	"w_wad.h"
+	"sample_flac.h"
+	"i_music.h"
+	"i_musicinterns.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\win32\resource.h
+
+1151630006 c:\dev\zdoom-2.1.4-src\src\sound\fmodsound.h
+	"i_sound.h"
+	<fmod.h>
+
+1146692701 c:\dev\zdoom-2.1.4-src\src\sound\i_musicinterns.h
+	<windows.h>
+	<mmsystem.h>
+	<SDL.h>
+	<fmod.h>
+	"tempfiles.h"
+	"oplsynth/opl_mus_player.h"
+	"c_cvars.h"
+	"mus2midi.h"
+	"i_sound.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\tempfiles.h
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\sound\i_music.cpp
+	<windows.h>
+	<mmsystem.h>
+	<SDL.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<signal.h>
+	<unistd.h>
+	<wordexp.h>
+	<stdio.h>
+	"mus2midi.h"
+	<ctype.h>
+	<assert.h>
+	<stdio.h>
+	"doomtype.h"
+	"m_argv.h"
+	"i_music.h"
+	"i_musicinterns.h"
+	"w_wad.h"
+	"c_console.h"
+	"c_dispatch.h"
+	"i_system.h"
+	"i_sound.h"
+	"m_swap.h"
+	"i_cd.h"
+	"tempfiles.h"
+	"templates.h"
+	<fmod.h>
+
+1151630006 source:c:\dev\zdoom-2.1.4-src\src\sound\i_sound.cpp
+	<windows.h>
+	<mmsystem.h>
+	"resource.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	"doomtype.h"
+	"m_alloc.h"
+	<math.h>
+	"fmodsound.h"
+	"altsound.h"
+	"m_swap.h"
+	"stats.h"
+	"files.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"i_system.h"
+	"i_sound.h"
+	"i_music.h"
+	"m_argv.h"
+	"m_misc.h"
+	"w_wad.h"
+	"i_video.h"
+	"s_sound.h"
+	"gi.h"
+	"doomdef.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\sound\music_cd.cpp
+	"i_musicinterns.h"
+	"i_cd.h"
+
+1145015932 source:c:\dev\zdoom-2.1.4-src\src\sound\music_flac.cpp
+	"i_musicinterns.h"
+	"templates.h"
+	<string.h>
+	<FLAC++/decoder.h>
+
+1150831839 source:c:\dev\zdoom-2.1.4-src\src\sound\music_midi_midiout.cpp
+	"i_musicinterns.h"
+	"templates.h"
+	"doomdef.h"
+	"m_swap.h"
+
+1141358221 source:c:\dev\zdoom-2.1.4-src\src\sound\music_midi_stream.cpp
+	"c_dispatch.h"
+	"i_musicinterns.h"
+	"i_music.h"
+	"templates.h"
+	"v_text.h"
+	"m_menu.h"
+
+1147744218 source:c:\dev\zdoom-2.1.4-src\src\sound\music_midi_timidity.cpp
+	"i_musicinterns.h"
+	"c_cvars.h"
+	"cmdlib.h"
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<wordexp.h>
+
+1145015932 source:c:\dev\zdoom-2.1.4-src\src\sound\music_mod.cpp
+	"i_musicinterns.h"
+
+1145015932 source:c:\dev\zdoom-2.1.4-src\src\sound\music_mus_midiout.cpp
+	"i_musicinterns.h"
+	"templates.h"
+	"doomdef.h"
+	"m_swap.h"
+
+1145015932 source:c:\dev\zdoom-2.1.4-src\src\sound\music_mus_opl.cpp
+	"i_musicinterns.h"
+
+1145015932 source:c:\dev\zdoom-2.1.4-src\src\sound\music_spc.cpp
+	"i_musicinterns.h"
+	"templates.h"
+	"c_cvars.h"
+	"doomdef.h"
+
+1146310809 source:c:\dev\zdoom-2.1.4-src\src\sound\music_stream.cpp
+	"i_musicinterns.h"
+
+1148354749 source:c:\dev\zdoom-2.1.4-src\src\sound\sample_flac.cpp
+	<string.h>
+	"sample_flac.h"
+	"w_wad.h"
+	"templates.h"
+
+1145578975 source:c:\dev\zdoom-2.1.4-src\src\st_stuff.cpp
+	"d_protocol.h"
+	"gstrings.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"d_event.h"
+	"gi.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\stats.cpp
+	"doomtype.h"
+	"stats.h"
+	"v_video.h"
+	"v_text.h"
+	"hu_stuff.h"
+	"st_stuff.h"
+	"c_dispatch.h"
+	"m_swap.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\stringtable.cpp
+	<string.h>
+	<stddef.h>
+	"stringtable.h"
+	"cmdlib.h"
+	"m_swap.h"
+	"w_wad.h"
+	"i_system.h"
+	"sc_man.h"
+	"zstring.h"
+	"c_dispatch.h"
+	"doomerrors.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\tables.cpp
+	"tables.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\tempfiles.cpp
+	<stdio.h>
+	<malloc.h>
+	"tempfiles.h"
+
+1154132784 source:c:\dev\zdoom-2.1.4-src\src\thingdef.cpp
+	"gi.h"
+	"actor.h"
+	"info.h"
+	"sc_man.h"
+	"tarray.h"
+	"w_wad.h"
+	"templates.h"
+	"r_defs.h"
+	"r_draw.h"
+	"a_pickups.h"
+	"s_sound.h"
+	"cmdlib.h"
+	"p_lnspec.h"
+	"p_enemy.h"
+	"a_action.h"
+	"decallib.h"
+	"m_random.h"
+	"autosegs.h"
+	"i_system.h"
+	"p_local.h"
+	"p_effect.h"
+	"v_palette.h"
+	"doomerrors.h"
+	"a_doomglobal.h"
+	"a_hexenglobal.h"
+	"a_weaponpiece.h"
+	"p_conversation.h"
+	"v_text.h"
+	"thingdef.h"
+	"thingdef_specials.h"
+	"d_dehackedactions.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\thingdef_specials.h
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\thingdef_codeptr.cpp
+	"gi.h"
+	"actor.h"
+	"info.h"
+	"sc_man.h"
+	"tarray.h"
+	"w_wad.h"
+	"templates.h"
+	"r_defs.h"
+	"r_draw.h"
+	"a_pickups.h"
+	"s_sound.h"
+	"cmdlib.h"
+	"p_lnspec.h"
+	"p_enemy.h"
+	"a_action.h"
+	"decallib.h"
+	"m_random.h"
+	"autosegs.h"
+	"i_system.h"
+	"p_local.h"
+	"c_console.h"
+	"doomerrors.h"
+	"vectors.h"
+	"a_sharedglobal.h"
+	"a_doomglobal.h"
+	"thingdef.h"
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\thingdef_exp.cpp
+	"actor.h"
+	"sc_man.h"
+	"tarray.h"
+	"templates.h"
+	"vectors.h"
+	"cmdlib.h"
+	"i_system.h"
+	"m_random.h"
+	"a_pickups.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\tmap.nas
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\tmap2.nas
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\tmap3.nas
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\v_collection.cpp
+	"v_collection.h"
+	"v_font.h"
+	"v_video.h"
+	"m_swap.h"
+	"w_wad.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\v_draw.cpp
+	<stdio.h>
+	<stdarg.h>
+	"doomtype.h"
+	"v_video.h"
+	"m_swap.h"
+	"r_defs.h"
+	"r_draw.h"
+	"r_things.h"
+	"i_system.h"
+	"i_video.h"
+	"templates.h"
+
+1150727470 source:c:\dev\zdoom-2.1.4-src\src\v_font.cpp
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<ctype.h>
+	"templates.h"
+	"doomtype.h"
+	"m_swap.h"
+	"v_font.h"
+	"v_video.h"
+	"w_wad.h"
+	"r_data.h"
+	"i_system.h"
+	"gi.h"
+	"cmdlib.h"
+	"sc_man.h"
+
+1153368819 source:c:\dev\zdoom-2.1.4-src\src\v_palette.cpp
+	<stddef.h>
+	<string.h>
+	<math.h>
+	<io.h>
+	<unistd.h>
+	<fcntl.h>
+	"templates.h"
+	"v_video.h"
+	"m_alloc.h"
+	"i_system.h"
+	"r_main.h"
+	"w_wad.h"
+	"i_video.h"
+	"c_dispatch.h"
+	"g_level.h"
+	"st_stuff.h"
+	"gi.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\v_pfx.cpp
+	"doomtype.h"
+	"i_system.h"
+	"v_palette.h"
+	"v_pfx.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\v_pfx.h
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\v_text.cpp
+	<stdlib.h>
+	<stdarg.h>
+	<ctype.h>
+	"v_text.h"
+	"i_system.h"
+	"v_video.h"
+	"hu_stuff.h"
+	"w_wad.h"
+	"m_swap.h"
+	"doomstat.h"
+	"templates.h"
+
+1150727470 source:c:\dev\zdoom-2.1.4-src\src\v_video.cpp
+	<stdio.h>
+	"m_alloc.h"
+	"i_system.h"
+	"i_video.h"
+	"r_local.h"
+	"r_draw.h"
+	"r_plane.h"
+	"r_state.h"
+	"doomdef.h"
+	"doomdata.h"
+	"doomstat.h"
+	"c_console.h"
+	"hu_stuff.h"
+	"m_argv.h"
+	"m_bbox.h"
+	"m_swap.h"
+	"m_menu.h"
+	"i_video.h"
+	"v_video.h"
+	"v_text.h"
+	"w_wad.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"cmdlib.h"
+	"gi.h"
+	"templates.h"
+	"sbar.h"
+
+1140066296 source:c:\dev\zdoom-2.1.4-src\src\vectors.cpp
+	"vectors.h"
+	"actor.h"
+	"tables.h"
+
+1152782276 source:c:\dev\zdoom-2.1.4-src\src\w_wad.cpp
+	<stdlib.h>
+	<ctype.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<string.h>
+	"m_alloc.h"
+	"doomtype.h"
+	"m_argv.h"
+	"i_system.h"
+	"cmdlib.h"
+	"c_dispatch.h"
+	"w_wad.h"
+	"w_zip.h"
+	"m_crc32.h"
+	"v_text.h"
+	"templates.h"
+	"gi.h"
+	<windows.h>
+
+1145578975 c:\dev\zdoom-2.1.4-src\src\w_zip.h
+
+1149837586 source:c:\dev\zdoom-2.1.4-src\src\wi_stuff.cpp
+	<ctype.h>
+	<stdio.h>
+	"m_random.h"
+	"m_swap.h"
+	"i_system.h"
+	"w_wad.h"
+	"g_game.h"
+	"g_level.h"
+	"r_local.h"
+	"s_sound.h"
+	"doomstat.h"
+	"v_video.h"
+	"i_video.h"
+	"wi_stuff.h"
+	"c_console.h"
+	"hu_stuff.h"
+	"v_palette.h"
+	"s_sndseq.h"
+	"sc_man.h"
+	"v_text.h"
+	"gi.h"
+
+1148354749 source:c:\dev\zdoom-2.1.4-src\src\win32\eaxedit.cpp
+	<windows.h>
+	<commctrl.h>
+	<commdlg.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"resource.h"
+	"s_sound.h"
+	"templates.h"
+	"cmdlib.h"
+	"c_dispatch.h"
+	"c_cvars.h"
+	"doomstat.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\win32\hardware.cpp
+	<windows.h>
+	"hardware.h"
+	"win32iface.h"
+	"i_video.h"
+	"i_system.h"
+	"c_console.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"v_text.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\win32\hardware.h
+	"i_video.h"
+	"v_video.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\win32\win32iface.h
+	<windows.h>
+	<ddraw.h>
+	"hardware.h"
+	"v_video.h"
+
+972084462 c:\dev\dx80_mgw\include\ddraw.h
+	<objbase.h>
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\win32\helperthread.cpp
+	"helperthread.h"
+
+1149986220 c:\dev\zdoom-2.1.4-src\src\win32\helperthread.h
+	<windows.h>
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\win32\i_cd.cpp
+	<windows.h>
+	<mmsystem.h>
+	<ctype.h>
+	<stdlib.h>
+	"doomtype.h"
+	"c_cvars.h"
+	"c_dispatch.h"
+	"m_argv.h"
+	"i_system.h"
+	"i_cd.h"
+	"helperthread.h"
+
+1153517799 source:c:\dev\zdoom-2.1.4-src\src\win32\i_crash.cpp
+	<windows.h>
+	<winnt.h>
+	<richedit.h>
+	<winuser.h>
+	<tlhelp32.h>
+	<dbghelp.h>
+	<commctrl.h>
+	<commdlg.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<setupapi.h>
+	<uxtheme.h>
+	<shellapi.h>
+	<uxtheme.h>
+	<stddef.h>
+	"resource.h"
+	"version.h"
+	"m_swap.h"
+	<stdlib.h>
+	<stdio.h>
+	<stdarg.h>
+	<time.h>
+	<zlib.h>
+
+1151630006 source:c:\dev\zdoom-2.1.4-src\src\win32\i_input.cpp
+	<windows.h>
+	<mmsystem.h>
+	<dbt.h>
+	<dinput.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<pbt.h>
+	"c_dispatch.h"
+	"doomtype.h"
+	"doomdef.h"
+	"doomstat.h"
+	"m_argv.h"
+	"i_input.h"
+	"v_video.h"
+	"i_sound.h"
+	"m_menu.h"
+	"g_game.h"
+	"d_main.h"
+	"d_gui.h"
+	"c_console.h"
+	"c_cvars.h"
+	"i_system.h"
+	"s_sound.h"
+	"m_misc.h"
+	"gameconfigfile.h"
+	"win32iface.h"
+	"templates.h"
+	"i_movie.h"
+
+1053378558 c:\dev\dx80_mgw\include\dinput.h
+	<objbase.h>
+
+1151630006 source:c:\dev\zdoom-2.1.4-src\src\win32\i_main.cpp
+	<windows.h>
+	<mmsystem.h>
+	<objbase.h>
+	<commctrl.h>
+	<malloc.h>
+	"m_alloc.h"
+	<eh.h>
+	<new.h>
+	<crtdbg.h>
+	"resource.h"
+	<stdio.h>
+	<stdarg.h>
+	<math.h>
+	"doomerrors.h"
+	"hardware.h"
+	"doomtype.h"
+	"m_argv.h"
+	"d_main.h"
+	"i_system.h"
+	"c_console.h"
+	"version.h"
+	"i_video.h"
+	"i_sound.h"
+	"autosegs.h"
+	"w_wad.h"
+	"stats.h"
+	<assert.h>
+	"c_dispatch.h"
+
+1149986220 source:c:\dev\zdoom-2.1.4-src\src\win32\i_movie.cpp
+	"c_cvars.h"
+	"i_movie.h"
+	<windows.h>
+	<dshow.h>
+	"i_movie.h"
+	"i_sound.h"
+	"v_video.h"
+	"c_console.h"
+	"win32iface.h"
+	"sbar.h"
+
+969621176 c:\dev\dx80_mgw\include\dshow.h
+	<windows.h>
+	<windowsx.h>
+	<olectl.h>
+	<ddraw.h>
+	<mmsystem.h>
+	<strmif.h>
+	<amvideo.h>
+	<amaudio.h>
+	<control.h>
+	<evcode.h>
+	<uuids.h>
+	<errors.h>
+	<edevdefs.h>
+	<audevcod.h>
+	<dvdevcod.h>
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\errors.h
+
+970434880 c:\dev\dx80_mgw\include\dvdevcod.h
+
+1153368819 source:c:\dev\zdoom-2.1.4-src\src\win32\i_system.cpp
+	<stdlib.h>
+	<stdio.h>
+	<io.h>
+	<direct.h>
+	<string.h>
+	<process.h>
+	<stdarg.h>
+	<sys/types.h>
+	<sys/timeb.h>
+	<windows.h>
+	<mmsystem.h>
+	"hardware.h"
+	"doomerrors.h"
+	<math.h>
+	"doomtype.h"
+	"version.h"
+	"doomdef.h"
+	"cmdlib.h"
+	"m_argv.h"
+	"m_misc.h"
+	"i_video.h"
+	"i_sound.h"
+	"i_music.h"
+	"resource.h"
+	"d_main.h"
+	"d_net.h"
+	"g_game.h"
+	"i_input.h"
+	"i_system.h"
+	"c_dispatch.h"
+	"templates.h"
+	"stats.h"
+
+1151630006 source:c:\dev\zdoom-2.1.4-src\src\win32\win32video.cpp
+	<windows.h>
+	<ddraw.h>
+	<stdio.h>
+	"doomtype.h"
+	"c_dispatch.h"
+	"templates.h"
+	"i_system.h"
+	"i_video.h"
+	"v_video.h"
+	"v_pfx.h"
+	"stats.h"
+	"doomerrors.h"
+	"win32iface.h"
+
+1151194578 source:c:\dev\zdoom-2.1.4-src\src\win32\zdoom.rc
+	"resource.h"
+	"afxres.h"
+	"../version.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\win32\afxres.h
+	"winres.h"
+
+1140066296 c:\dev\zdoom-2.1.4-src\src\win32\winres.h
+	<winresrc.h>
+
+1148614702 source:c:\dev\zdoom-2.1.4-src\src\zstrformat.cpp
+	<limits.h>
+	<string.h>
+	<stddef.h>
+	<stdlib.h>
+	<math.h>
+	<malloc.h>
+	"zstring.h"
+	<stdint.h>
+
+1148722071 source:c:\dev\zdoom-2.1.4-src\src\zstring.cpp
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<new>
+	"zstring.h"
+	<windows.h>
+
+1153037445 source:c:\dev\zdoom-2.1.4-src\src\g_raven\a_artiegg.cpp
+	"info.h"
+	"a_pickups.h"
+	"a_artifacts.h"
+	"gstrings.h"
+	"p_local.h"
+	"gi.h"
+	"p_enemy.h"
+	"s_sound.h"
+	"m_random.h"
+	"a_sharedglobal.h"
+
