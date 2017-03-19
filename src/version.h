@@ -43,7 +43,7 @@
 #define DOTVERSIONSTR_NOREV "2.1.4"
 
 // The version string the user actually sees.
-#define DOTVERSIONSTR DOTVERSIONSTR_NOREV " (r" SVN_REVISION_STRING ")"
+#define DOTVERSIONSTR DOTVERSIONSTR_NOREV " CLASSIC"
 
 // The version as seen in the Windows resource
 #define RC_FILEVERSION 2,1,2,SVN_REVISION_NUMBER

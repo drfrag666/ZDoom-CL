@@ -135,6 +135,8 @@ int dc_fillcolor;
 byte *dc_translation;
 byte *translationtables[NUM_TRANSLATION_TABLES];
 
+EXTERN_CVAR (Int, r_detail)
+
 /************************************/
 /*									*/
 /* Palettized drawers (C versions)	*/
@@ -1880,9 +1882,9 @@ void R_DetailDouble ()
 	DetailDoubleCycles = 0;
 	clock (DetailDoubleCycles);
 
-	switch ((detailxshift << 1) | detailyshift)
+	switch (r_detail) // (detailxshift << 1) | detailyshift
 	{
-	case 1:		// y-double
+	case 2:		// y-double
 #ifdef USEASM
 		DoubleVert_ASM (viewheight, viewwidth, dc_destorg, RenderTarget->GetPitch());
 #else
@@ -1901,7 +1903,7 @@ void R_DetailDouble ()
 #endif
 		break;
 
-	case 2:		// x-double
+	case 1:		// x-double
 #ifdef USEASM
 		if (CPU.bMMX && (viewwidth&15)==0)
 		{
@@ -1955,6 +1957,33 @@ void R_DetailDouble ()
 					lineto[x*2+1] = c;
 					lineto[x*2+realpitch] = c;
 					lineto[x*2+realpitch+1] = c;
+				}
+			}
+		}
+		break;
+	case 4:		// x-quad and y-double
+		{
+			int rowsize = viewwidth;
+			int realpitch = RenderTarget->GetPitch();
+			int pitch = realpitch << 1;
+			int y,x;
+			BYTE *linefrom, *lineto;
+
+			linefrom = dc_destorg;
+			for (y = viewheight; y != 0; --y, linefrom += pitch)
+			{
+				lineto = linefrom - viewwidth;
+				for (x = 0; x < rowsize; x = x+2)
+				{
+					BYTE c = linefrom[x];
+					lineto[x*2] = c;
+					lineto[x*2+1] = c;
+					lineto[x*2+2] = c;
+					lineto[x*2+3] = c;
+					lineto[x*2+realpitch] = c;
+					lineto[x*2+realpitch+1] = c;
+					lineto[x*2+realpitch+2] = c;
+					lineto[x*2+realpitch+3] = c;
 				}
 			}
 		}

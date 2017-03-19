@@ -466,10 +466,11 @@ static value_t Crosshairs[] =
 
 static value_t DetailModes[] =
 {
-	{ 0.0, "Normal" },
+	{ 0.0, "High" },
 	{ 1.0, "Double Horizontally" },
 	{ 2.0, "Double Vertically" },
-	{ 3.0, "Double Horiz and Vert" }
+	{ 3.0, "Double Horiz and Vert" },
+	{ 4.0, "Quad Horiz and Double Vert" }
 };
 
 static value_t ColumnMethods[] = {
@@ -503,7 +504,7 @@ static menuitem_t VideoItems[] = {
 	{ slider,	"Brightness",			{&Gamma},			   	{1.0}, {3.0},	{0.1}, {NULL} },
 	{ discrete,	"Crosshair",			{&crosshair},		   	{8.0}, {0.0},	{0.0}, {Crosshairs} },
 	{ discrete, "Column render mode",	{&r_columnmethod},		{2.0}, {0.0},	{0.0}, {ColumnMethods} },
-	{ discrete, "Detail mode",			{&r_detail},		   	{4.0}, {0.0},	{0.0}, {DetailModes} },
+	{ discrete, "Detail mode",			{&r_detail},		   	{5.0}, {0.0},	{0.0}, {DetailModes} },
 	{ discrete, "Stretch short skies",	{&r_stretchsky},	   	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Stretch status bar",	{&st_scale},			{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Screen wipe style",	{&wipetype},			{4.0}, {0.0},	{0.0}, {Wipes} },
