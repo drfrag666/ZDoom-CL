@@ -279,24 +279,32 @@ void cht_DoCheat (player_t *player, int cheat)
 			else
 			{
 				player->playerstate = PST_LIVE;
-				if (player->mo->tracer != NULL)
-				{
-					APlayerPawn * pmo = player->mo;
-					player->mo = (APlayerPawn*)player->mo->tracer;
-					pmo->Destroy();
-					player->mo->player=player;
-					player->mo->renderflags &= ~RF_INVISIBLE;
-					player->morphTics = 0;
-				}
 				player->health = player->mo->health = player->mo->GetDefault()->health;
 				player->viewheight = ((APlayerPawn *)player->mo->GetDefault())->ViewHeight;
 				player->mo->flags = player->mo->GetDefault()->flags;
+				player->mo->flags2 = player->mo->GetDefault()->flags2;
+				player->mo->flags3 = player->mo->GetDefault()->flags3;
+				player->mo->flags4 = player->mo->GetDefault()->flags4;
+				player->mo->flags5 = player->mo->GetDefault()->flags5;
+				player->mo->renderflags &= ~RF_INVISIBLE;
 				player->mo->height = player->mo->GetDefault()->height;
+				player->mo->radius = player->mo->GetDefault()->radius;
+ 				player->mo->special1 = 0;	// required for the Hexen fighter's fist attack. 
+ 											// This gets set by AActor::Die as flag for the wimpy death and must be reset here.
 				player->mo->SetState (player->mo->SpawnState);
 				player->mo->Translation = TRANSLATION(TRANSLATION_Players, BYTE(player-players));
 				player->mo->DamageType = MOD_UNKNOWN;
 //				player->mo->GiveDefaultInventory();
-				P_SetPsprite(player, ps_weapon, player->ReadyWeapon->UpState);
+				if (player->ReadyWeapon != NULL)
+				{
+					P_SetPsprite(player, ps_weapon, player->ReadyWeapon->UpState);
+				}
+
+				if (player->morphTics > 0)
+				{
+					P_UndoPlayerMorph(player);
+				}
+
 			}
 		}
 		break;
