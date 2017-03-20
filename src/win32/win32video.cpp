@@ -197,9 +197,10 @@ Win32Video::Win32Video (int parm)
 	{
 		// Windows 95 will let us use Mode X. If we didn't find any linear
 		// modes in the loop above, add the Mode X modes here.
-		AddMode (320, 200, 8, 200);
-		AddMode (320, 240, 8, 240);
+		AddMode (320, 200, 8, 200, 0);
+		AddMode (320, 240, 8, 240, 0);
 	}
+	AddLowResModes ();
 	// Now add 16:9 and 16:10 resolutions you can use in a window or letterboxed
 	for (mode = m_Modes; mode != NULL; mode = nextmode)
 	{
@@ -208,11 +209,11 @@ Win32Video::Win32Video (int parm)
 		{
 			if (mode->width >= 360)
 			{
-				AddMode (mode->width, mode->width * 9/16, mode->bits, mode->height);
+				AddMode (mode->width, mode->width * 9/16, mode->bits, mode->height, 0);
 			}
 			if (mode->width > 640)
 			{
-				AddMode (mode->width, mode->width * 10/16, mode->bits, mode->height);
+				AddMode (mode->width, mode->width * 10/16, mode->bits, mode->height, 0);
 			}
 		}
 	}
@@ -291,14 +292,68 @@ HRESULT WINAPI Win32Video::EnumDDModesCB (LPDDSURFACEDESC desc, void *data)
 		desc->dwHeight >= 200 &&
 		desc->dwWidth >= 320)
 	{
-		((Win32Video *)data)->AddMode (desc->dwWidth, desc->dwHeight, 8, desc->dwHeight);
+		((Win32Video *)data)->AddMode (desc->dwWidth, desc->dwHeight, 8, desc->dwHeight, 0);
 	}
 
 	return DDENUMRET_OK;
 }
 
-void Win32Video::AddMode (int x, int y, int bits, int y2)
+//==========================================================================
+//
+// Win32Video :: AddLowResModes
+//
+// Recent NVidia drivers no longer support resolutions below 640x480, even
+// if you try to add them as a custom resolution. With DDrawFB, pixel doubling
+// is quite easy to do and hardware-accelerated. If you have 1280x800, then
+// you can have 320x200, but don't be surprised if it shows up as widescreen
+// on a widescreen monitor, since that's what it is.
+//
+//==========================================================================
+
+void Win32Video::AddLowResModes()
 {
+	ModeInfo *mode, *nextmode;
+
+	for (mode = m_Modes; mode != NULL; mode = nextmode)
+	{
+		nextmode = mode->next;
+		if (mode->realheight == mode->height &&
+			mode->doubling == 0 &&
+			mode->height >= 200*2 &&
+			mode->height <= 480*2 &&
+			mode->width >= 320*2 &&
+			mode->width <= 640*2)
+		{
+			AddMode (mode->width / 2, mode->height / 2, mode->bits, mode->height / 2, 1);
+		}
+	}
+	for (mode = m_Modes; mode != NULL; mode = nextmode)
+	{
+		nextmode = mode->next;
+		if (mode->realheight == mode->height &&
+			mode->doubling == 0 &&
+			mode->height >= 200*4 &&
+			mode->height <= 480*4 &&
+			mode->width >= 320*4 &&
+			mode->width <= 640*4)
+		{
+			AddMode (mode->width / 4, mode->height / 4, mode->bits, mode->height / 4, 2);
+		}
+	}
+}
+
+void Win32Video::AddMode (int x, int y, int bits, int y2, int doubling)
+{
+	// Reject modes that do not meet certain criteria.
+	if ((x & 7) != 0 ||
+		y > MAXHEIGHT ||
+		x > MAXWIDTH ||
+		y < 200 ||
+		x < 320)
+	{
+		return;
+	}
+
 	ModeInfo **probep = &m_Modes;
 	ModeInfo *probe = m_Modes;
 
@@ -321,7 +376,7 @@ void Win32Video::AddMode (int x, int y, int bits, int y2)
 		return;
 	}
 
-	*probep = new ModeInfo (x, y, bits, y2);
+	*probep = new ModeInfo (x, y, bits, y2, doubling);
 	(*probep)->next = probe;
 }
 
@@ -393,6 +448,7 @@ DFrameBuffer *Win32Video::CreateFrameBuffer (int width, int height, bool fullscr
 			return old;
 		}
 		old->GetFlash (flashColor, flashAmount);
+		if (old == screen) screen = NULL;
 		delete old;
 	}
 	else
@@ -500,6 +556,7 @@ DDrawFB::DDrawFB (int width, int height, bool fullscreen)
 	Gamma = 1.0;
 	BufferPitch = Pitch;
 	FlipFlags = vid_vsync ? DDFLIP_WAIT : DDFLIP_WAIT|DDFLIP_NOVSYNC;
+	PixelDoubling = 0;
 
 	NeedGammaUpdate = false;
 	NeedPalUpdate = false;
@@ -605,16 +662,17 @@ bool DDrawFB::CreateResources ()
 			if (mode->width == Width && mode->height == Height)
 			{
 				TrueHeight = mode->realheight;
+				PixelDoubling = mode->doubling;
 				break;
 			}
 		}
-		hr = DDraw->SetDisplayMode (Width, TrueHeight, bits = vid_displaybits, 0, 0);
+		hr = DDraw->SetDisplayMode (Width << PixelDoubling, TrueHeight << PixelDoubling, bits = vid_displaybits, 0, 0);
 		if (FAILED(hr))
 		{
 			bits = 32;
 			while (FAILED(hr) && bits >= 8)
 			{
-				hr = DDraw->SetDisplayMode (Width, Height, bits, 0, 0);
+				hr = DDraw->SetDisplayMode (Width << PixelDoubling, Height << PixelDoubling, bits, 0, 0);
 				bits -= 8;
 			}
 			if (FAILED(hr))
@@ -665,8 +723,8 @@ bool DDrawFB::CreateResources ()
 		MaybeCreatePalette ();
 
 		// Resize the window to match desired dimensions
-		int sizew = Width + GetSystemMetrics (SM_CXSIZEFRAME)*2;
-		int sizeh = Height + GetSystemMetrics (SM_CYSIZEFRAME) * 2 +
+		int sizew = (Width << PixelDoubling) + GetSystemMetrics (SM_CXSIZEFRAME)*2;
+		int sizeh = (Height << PixelDoubling) + GetSystemMetrics (SM_CYSIZEFRAME) * 2 +
 					 GetSystemMetrics (SM_CYCAPTION);
 		LOG2 ("Resize window to %dx%d\n", sizew, sizeh);
 		VidResizing = true;
@@ -695,8 +753,8 @@ bool DDrawFB::CreateResources ()
 
 		// Create the backbuffer
 		ddsd.dwFlags        = DDSD_WIDTH | DDSD_HEIGHT | DDSD_CAPS;
-		ddsd.dwWidth        = Width;
-		ddsd.dwHeight       = Height;
+		ddsd.dwWidth        = Width << PixelDoubling;
+		ddsd.dwHeight       = Height << PixelDoubling;
 		ddsd.ddsCaps.dwCaps = DDSCAPS_OFFSCREENPLAIN | (UseBlitter ? DDSCAPS_SYSTEMMEMORY : 0);
 
 		hr = DDraw->CreateSurface (&ddsd, &BackSurf, NULL);
@@ -1021,6 +1079,11 @@ void DDrawFB::MaybeCreatePalette ()
 					// legal behavior. Wish I knew...)
 					NeedPalUpdate = true;
 				}
+			}
+			if (PixelDoubling)
+			{
+				UsePfx = true;
+				GPfx.SetFormat (-8, 0, 0, 0);
 			}
 		}
 	}
@@ -1490,8 +1553,8 @@ void DDrawFB::Update ()
 				if (UsePfx)
 				{
 					GPfx.Convert (MemBuffer, BufferPitch,
-						writept, Pitch, Width, Height,
-						FRACUNIT, FRACUNIT, 0, 0);
+						writept, Pitch, Width << PixelDoubling, Height << PixelDoubling,
+						FRACUNIT >> PixelDoubling, FRACUNIT >> PixelDoubling, 0, 0);
 				}
 				else
 				{

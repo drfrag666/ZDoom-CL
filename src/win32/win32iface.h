@@ -59,17 +59,19 @@ class Win32Video : public IVideo
  private:
 	struct ModeInfo
 	{
-		ModeInfo (int inX, int inY, int inBits, int inRealY)
+		ModeInfo (int inX, int inY, int inBits, int inRealY, int inDoubling)
 			: next (NULL),
 			  width (inX),
 			  height (inY),
 			  bits (inBits),
-			  realheight (inRealY)
+			  realheight (inRealY),
+			  doubling (inDoubling)
 		{}
 
 		ModeInfo *next;
 		int width, height, bits;
 		int realheight;
+		int doubling;
 	} *m_Modes;
 
 	ModeInfo *m_IteratorMode;
@@ -79,11 +81,13 @@ class Win32Video : public IVideo
 
 	bool m_CalledCoInitialize;
 
-	void AddMode (int x, int y, int bits, int baseHeight);
+	void AddMode (int x, int y, int bits, int baseHeight, int doubling);
 	void FreeModes ();
 
 	void NewDDMode (int x, int y);
 	static HRESULT WINAPI EnumDDModesCB (LPDDSURFACEDESC desc, void *modes);
+
+	void AddLowResModes ();
 
 	friend class DDrawFB;
 };
@@ -169,6 +173,7 @@ private:
 	int BufferCount;
 	int BufferPitch;
 	int TrueHeight;
+	int PixelDoubling;
 	float Gamma;
 
 	bool NeedGammaUpdate;
