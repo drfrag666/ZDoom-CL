@@ -153,7 +153,7 @@ static int	oldentertics;
 
 extern	BOOL	 advancedemo;
 
-CVAR (Bool, cl_capfps, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+CVAR (Bool, cl_capfps, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 
 // [RH] Special "ticcmds" get stored in here
 static struct TicSpecial

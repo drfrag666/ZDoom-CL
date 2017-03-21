@@ -201,6 +201,7 @@ DFrameBuffer *SDLVideo::CreateFrameBuffer (int width, int height, bool fullscree
 			return old;
 		}
 		old->GetFlash (flashColor, flashAmount);
+		if (screen == old) screen = NULL;
 		delete old;
 	}
 	else

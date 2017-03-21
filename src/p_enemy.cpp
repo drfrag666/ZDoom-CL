@@ -69,7 +69,7 @@ static FRandom pr_skiptarget("SkipTarget");
 // 2. Their animation is not designed for movement interpolation
 // The result is that they tend to 'glide' across the floor
 // so this CVAR allows to switch it off.
-CVAR(Bool, nomonsterinterpolation, false, CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
+CVAR(Bool, nomonsterinterpolation, true, CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
 
 //
 // P_NewChaseDir related LUT.

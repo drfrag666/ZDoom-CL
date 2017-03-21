@@ -197,6 +197,7 @@ int I_PickIWad (WadStuff *wads, int numwads, bool queryiwad, int defaultiwad);
 
 // [RH] Returns millisecond-accurate time
 unsigned int I_MSTime (void);
+unsigned int I_FPSTime();
 
 // [RH] Title string to display at bottom of console during startup
 extern char DoomStartupTitle[256];

@@ -118,8 +118,26 @@ unsigned int I_MSTime (void)
 static DWORD TicStart;
 static DWORD TicNext;
 
+//==========================================================================
 //
-// I_GetTime
+// I_FPSTime
+//
+// Returns the current system time in milliseconds. This is used by the FPS
+// meter of DFrameBuffer::DrawRateStuff(). Since the screen can display
+// before the play simulation is ready to begin, this needs to be
+// separate from I_MSTime().
+//
+//==========================================================================
+
+unsigned int I_FPSTime()
+{
+	return timeGetTime();
+}
+
+//==========================================================================
+//
+//
+// I_GetTimePolled
 // returns time in 1/35th second tics
 //
 int I_GetTimePolled (bool saveMS)
@@ -243,13 +261,30 @@ void I_DetectOS (void)
 		{
 			osname = "NT";
 		}
-		else if (info.dwMinorVersion == 0)
-		{
-			osname = "2000";
-		}
 		else
 		{
-			osname = "XP";
+			if (info.dwMajorVersion == 5)
+			{
+				if (info.dwMinorVersion == 0)
+				{
+					osname = "2000";
+				}
+				else
+				{
+					osname = "XP";
+				}
+			}
+			else
+			{
+				if (info.dwMinorVersion == 0)
+				{
+					osname = "Vista";
+				}
+				else
+				{
+					osname = "7";
+				}
+			}
 		}
 		break;
 

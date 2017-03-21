@@ -188,6 +188,9 @@ void DCanvas::Clear (int left, int top, int right, int bottom, int color) const
 	int x, y;
 	byte *dest;
 
+	assert (left < right);
+	assert (top < bottom);
+
 	dest = Buffer + top * Pitch + left;
 	x = right - left;
 	for (y = top; y < bottom; y++)
@@ -609,7 +612,7 @@ void DFrameBuffer::DrawRateStuff ()
 	// Draws frame time and cumulative fps
 	if (vid_fps)
 	{
-		QWORD ms = I_MSTime ();
+		DWORD ms = I_FPSTime();
 		DWORD howlong = DWORD(ms - LastMS);
 		if (howlong > 0)
 		{
@@ -617,9 +620,9 @@ void DFrameBuffer::DrawRateStuff ()
 			int chars;
 
 			chars = sprintf (fpsbuff, "%2lu ms (%3lu fps)", howlong, LastCount);
-			Clear (0, screen->GetHeight() - 8, chars * 8, screen->GetHeight(), 0);
+			Clear (Width - chars * 8, 0, Width, 8, 0);
 			SetFont (ConFont);
-			DrawText (CR_WHITE, 0, screen->GetHeight() - 8, (char *)&fpsbuff[0], TAG_DONE);
+			DrawText (CR_WHITE, Width - chars * 8, 0, (char *)&fpsbuff[0], TAG_DONE);
 			SetFont (SmallFont);
 
 			DWORD thisSec = ms/1000;

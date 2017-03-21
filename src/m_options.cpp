@@ -451,6 +451,8 @@ EXTERN_CVAR (Int,  wipetype)
 EXTERN_CVAR (Bool, vid_palettehack)
 EXTERN_CVAR (Bool, vid_attachedsurfaces)
 EXTERN_CVAR (Int,  screenblocks)
+EXTERN_CVAR (Bool, vid_vsync)
+EXTERN_CVAR (Bool, cl_capfps)
 
 static value_t Crosshairs[] =
 {
@@ -503,6 +505,8 @@ static menuitem_t VideoItems[] = {
 	{ slider,	"Screen size",			{&screenblocks},	   	{3.0}, {12.0},	{1.0}, {NULL} },
 	{ slider,	"Brightness",			{&Gamma},			   	{1.0}, {3.0},	{0.1}, {NULL} },
 	{ discrete,	"Crosshair",			{&crosshair},		   	{8.0}, {0.0},	{0.0}, {Crosshairs} },
+	{ discrete, "Vertical Sync",		{&vid_vsync},	   		{2.0}, {0.0},	{0.0}, {OnOff} },
+	{ discrete, "Rendering Interpolation",	{&cl_capfps},	   	{2.0}, {0.0},	{0.0}, {NoYes} },	
 	{ discrete, "Column render mode",	{&r_columnmethod},		{2.0}, {0.0},	{0.0}, {ColumnMethods} },
 	{ discrete, "Detail mode",			{&r_detail},		   	{5.0}, {0.0},	{0.0}, {DetailModes} },
 	{ discrete, "Stretch short skies",	{&r_stretchsky},	   	{2.0}, {0.0},	{0.0}, {OnOff} },
@@ -517,6 +521,7 @@ static menuitem_t VideoItems[] = {
 	{ discrete, "Rocket Trails",		{&cl_rockettrails},		{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Blood Type",			{&cl_bloodtype},	   	{3.0}, {0.0},	{0.0}, {BloodTypes} },
 	{ discrete, "Bullet Puff Type",		{&cl_pufftype},			{2.0}, {0.0},	{0.0}, {PuffTypes} },
+	{ discrete, "Interpolate monster movement",	{&nomonsterinterpolation},		{2.0}, {0.0},	{0.0}, {NoYes} },
 };
 
 menu_t VideoMenu =
@@ -989,8 +994,6 @@ static menuitem_t CompatibilityItems[] = {
 	{ bitflag,	"Self ref. sectors don't block shots",		{&compatflags}, {0}, {0}, {0}, {(value_t *)COMPATF_TRACE} },
 	{ bitflag,	"Monsters get stuck over dropoffs",			{&compatflags}, {0}, {0}, {0}, {(value_t *)COMPATF_DROPOFF} },
 	{ bitflag,	"Boom scrollers are additive",				{&compatflags}, {0}, {0}, {0}, {(value_t *)COMPATF_BOOMSCROLL} },
-	
-	{ discrete, "Interpolate monster movement",	{&nomonsterinterpolation},		{2.0}, {0.0},	{0.0}, {NoYes} },
 };
 
 static menu_t CompatibilityMenu =

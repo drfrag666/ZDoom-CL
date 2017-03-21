@@ -88,8 +88,6 @@ void	G_ReadDemoTiccmd (ticcmd_t *cmd, int player);
 void	G_WriteDemoTiccmd (ticcmd_t *cmd, int player, int buf);
 void	G_PlayerReborn (int player);
 
-void	G_DoReborn (int playernum, bool freshbot);
-
 void	G_DoNewGame (void);
 void	G_DoLoadGame (void);
 void	G_DoPlayDemo (void);
@@ -1764,7 +1762,7 @@ FString G_BuildSaveName (const char *prefix, int slot)
 }
 
 CVAR (Int, autosavenum, 0, CVAR_NOSET|CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
-CVAR (Int, disableautosave, 0, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+CVAR (Int, disableautosave, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CUSTOM_CVAR (Int, autosavecount, 4, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 {
 	if (self < 0)

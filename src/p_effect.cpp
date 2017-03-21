@@ -48,7 +48,7 @@
 #include "s_sound.h"
 #include "templates.h"
 
-CVAR (Int, cl_rockettrails, 1, CVAR_ARCHIVE);
+CVAR (Int, cl_rockettrails, 0, CVAR_ARCHIVE);
 
 #define FADEFROMTTL(a)	(255/(a))
 

@@ -88,8 +88,6 @@ enum
 static bool waitingforspawn[MAXPLAYERS];
 
 
-void G_DoReborn (int playernum, bool freshbot);
-
 DCajunMaster::~DCajunMaster()
 {
 	ForgetBots();
