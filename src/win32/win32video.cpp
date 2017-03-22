@@ -304,9 +304,9 @@ HRESULT WINAPI Win32Video::EnumDDModesCB (LPDDSURFACEDESC desc, void *data)
 //
 // Recent NVidia drivers no longer support resolutions below 640x480, even
 // if you try to add them as a custom resolution. With DDrawFB, pixel doubling
-// is quite easy to do and hardware-accelerated. If you have 1280x800, then
-// you can have 320x200, but don't be surprised if it shows up as widescreen
-// on a widescreen monitor, since that's what it is.
+// is easy to do but not hardware-accelerated. If you have 1280x800, then you
+// can have 320x200, but don't be surprised if it shows up as widescreen on
+// a widescreen monitor, since that's what it is.
 //
 //==========================================================================
 
