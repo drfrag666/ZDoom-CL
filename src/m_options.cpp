@@ -453,6 +453,7 @@ EXTERN_CVAR (Bool, vid_attachedsurfaces)
 EXTERN_CVAR (Int,  screenblocks)
 EXTERN_CVAR (Bool, vid_vsync)
 EXTERN_CVAR (Bool, cl_capfps)
+EXTERN_CVAR (Int, vid_displaybits)
 
 static value_t Crosshairs[] =
 {
@@ -498,6 +499,12 @@ static value_t Wipes[] = {
 	{ 3.0, "Crossfade" }
 };
 
+static value_t Bits[] = {
+	{ 8.0, "8" },
+	{ 16.0, "16" },
+	{ 32.0, "32" }
+};
+
 static menuitem_t VideoItems[] = {
 	{ more,		"Message Options",		{NULL},					{0.0}, {0.0},	{0.0}, {(value_t *)StartMessagesMenu} },
 	{ more,		"Automap Options",		{NULL},					{0.0}, {0.0},	{0.0}, {(value_t *)StartAutomapMenu} },
@@ -512,11 +519,12 @@ static menuitem_t VideoItems[] = {
 	{ discrete, "Stretch short skies",	{&r_stretchsky},	   	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Stretch status bar",	{&st_scale},			{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Screen wipe style",	{&wipetype},			{4.0}, {0.0},	{0.0}, {Wipes} },
+	{ discrete, "Fullscreen display bits", {&vid_displaybits},	{3.0}, {0.0},	{0.0}, {Bits} },
 #ifdef _WIN32
 	{ discrete, "DirectDraw palette hack", {&vid_palettehack},	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Use attached surfaces", {&vid_attachedsurfaces},{2.0}, {0.0},	{0.0}, {OnOff} },
 #endif
-	{ redtext,	" ",					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
+//	{ redtext,	" ",					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
 	{ discrete, "Use fuzz effect",		{&r_drawfuzz},			{2.0}, {0.0},	{0.0}, {YesNo} },
 	{ discrete, "Rocket Trails",		{&cl_rockettrails},		{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Blood Type",			{&cl_bloodtype},	   	{3.0}, {0.0},	{0.0}, {BloodTypes} },
