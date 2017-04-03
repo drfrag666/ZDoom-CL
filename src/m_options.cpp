@@ -833,6 +833,8 @@ EXTERN_CVAR (Bool, fullscreen)
 static value_t Depths[22];
 
 EXTERN_CVAR (Bool, vid_tft)		// Defined below
+EXTERN_CVAR (Bool, vid_nowidescreen)
+
 CUSTOM_CVAR (Int, menu_screenratios, 0, CVAR_ARCHIVE)
 {
 	if (self < 0 || self > 4)
@@ -873,6 +875,7 @@ static menuitem_t ModesItems[] = {
 	{ discrete, "Aspect ratio",			{&menu_screenratios},	{4.0}, {0.0},	{0.0}, {Ratios} },
 	{ discrete, "Fullscreen",			{&fullscreen},			{2.0}, {0.0},	{0.0}, {YesNo} },
 	{ discrete, "Enable 5:4 aspect ratio",{&vid_tft},			{2.0}, {0.0},	{0.0}, {YesNo} },
+	{ discrete, "Widescreen aspect ratio",{&vid_nowidescreen},	{2.0}, {0.0},	{0.0}, {NoYes} },
 	{ redtext,	" ",					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
 	{ screenres,NULL,					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
 	{ screenres,NULL,					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
@@ -892,9 +895,9 @@ static menuitem_t ModesItems[] = {
 
 #define VM_DEPTHITEM	0
 #define VM_ASPECTITEM	0
-#define VM_RESSTART		4
+#define VM_RESSTART		5
 #define VM_ENTERLINE	14
-#define VM_TESTLINE		16
+#define VM_TESTLINE		17
 
 menu_t ModesMenu =
 {

@@ -1650,8 +1650,8 @@ bool DDrawFB::PaintToWindow ()
 			if (LockSurf (NULL, NULL) != NoGood)
 			{
 				GPfx.Convert (MemBuffer, BufferPitch,
-					Buffer, Pitch, Width, Height,
-					FRACUNIT, FRACUNIT, 0, 0);
+					Buffer, Pitch, Width << PixelDoubling, Height << PixelDoubling,
+					FRACUNIT >> PixelDoubling, FRACUNIT >> PixelDoubling, 0, 0);
 				LockingSurf->Unlock (NULL);
 				if (FAILED (hr = PrimarySurf->Blt (&rect, BackSurf, NULL, DDBLT_WAIT|DDBLT_ASYNC, NULL)))
 				{

@@ -80,7 +80,7 @@ CVAR (Int, snd_buffersize, 0, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (String, snd_output, "default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 
 // killough 2/21/98: optionally use varying pitched sounds
-CVAR (Bool, snd_pitched, false, CVAR_ARCHIVE)
+CVAR (Bool, snd_pitched, true, CVAR_ARCHIVE)
 
 // Maps sfx channels onto FMOD channels
 static struct ChanMap
