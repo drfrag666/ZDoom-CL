@@ -370,6 +370,9 @@ IMPLEMENT_STATELESS_ACTOR (APlayerPawn, Any, -1, 0)
 	PROP_Mass (100)
 	PROP_PainChance (255)
 	PROP_SpeedFixed (1)
+	PROP_Flags (MF_SOLID|MF_SHOOTABLE|MF_DROPOFF|MF_PICKUP|MF_NOTDMATCH|MF_FRIENDLY)
+	PROP_Flags2 (MF2_SLIDE|MF2_PASSMOBJ|MF2_PUSHWALL|MF2_FLOORCLIP|MF2_WINDTHRUST)
+	PROP_Flags3 (MF3_NOBLOCKMONST)
 	// [GRB]
 	PROP_PlayerPawn_JumpZ (8*FRACUNIT)
 	PROP_PlayerPawn_ViewHeight (41*FRACUNIT)
@@ -381,7 +384,10 @@ IMPLEMENT_STATELESS_ACTOR (APlayerPawn, Any, -1, 0)
 	PROP_PlayerPawn_SoundClass ("player")
 END_DEFAULTS
 
-IMPLEMENT_ABSTRACT_ACTOR (APlayerChunk)
+IMPLEMENT_STATELESS_ACTOR (APlayerChunk, Any, -1, 0)
+	PROP_Flags (MF_DROPOFF)
+	PROP_Flags2 (MF2_PASSMOBJ)
+END_DEFAULTS
 
 void APlayerPawn::Serialize (FArchive &arc)
 {
@@ -831,18 +837,18 @@ void APlayerPawn::PlayIdle ()
 
 void APlayerPawn::PlayRunning ()
 {
-	if (state == SpawnState)
+	if (InStateSequence(state, SpawnState) && SeeState != NULL)
 		SetState (SeeState);
 }
 
 void APlayerPawn::PlayAttacking ()
 {
-	SetState (MissileState);
+	if (MissileState != NULL) SetState (MissileState);
 }
 
 void APlayerPawn::PlayAttacking2 ()
 {
-	SetState (MeleeState);
+	if (MeleeState != NULL) SetState (MeleeState);
 }
 
 void APlayerPawn::ThrowPoisonBag ()
