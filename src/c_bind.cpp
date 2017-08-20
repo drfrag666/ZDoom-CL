@@ -116,6 +116,9 @@ static const FBinding DefBindings[] =
 	{ "f12", "spynext" },
 	{ "mwheeldown", "weapnext" },
 	{ "mwheelup", "weapprev" },
+	{ "pgdn", "+lookup" },
+	{ "del", "+lookdown" },
+	{ "end", "centerview" },
 	{ NULL }
 };
 
