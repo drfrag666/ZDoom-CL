@@ -54,6 +54,20 @@ extern fixed_t globaluclip, globaldclip;
 EXTERN_CVAR (Bool, st_scale)
 CVAR (Bool, r_drawfuzz, true, CVAR_ARCHIVE)
 
+double sprite_distance_cull = 1e16;
+
+CUSTOM_CVAR(Float, r_spritedistancecull, 4000.0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (r_spritedistancecull > 0.0)
+	{
+		sprite_distance_cull = r_spritedistancecull * r_spritedistancecull;
+	}
+	else
+	{
+		sprite_distance_cull = 1e16;
+	}
+}
+
 
 //
 // Sprite rotation 0 is facing the viewer,
@@ -1192,6 +1206,15 @@ void R_ProjectSprite (AActor *thing, int fakeside)
 	{
 		return;
 	}
+
+	vec3_t ViewPos = {viewx/float(FRACUNIT),viewy/float(FRACUNIT),viewz/float(FRACUNIT)};
+	vec3_t ThingPos = {thing->x/float(FRACUNIT),thing->y/float(FRACUNIT),thing->z/float(FRACUNIT)};
+	vec3_t dist;
+
+	VectorSubtract( ThingPos, ViewPos, dist );
+	double distanceSquared = DotProduct( dist, dist );
+	if (distanceSquared > sprite_distance_cull)
+		return;
 
 	// [RH] Interpolate the sprite's position to make it look smooth
 	fx = thing->PrevX + FixedMul (r_TicFrac, thing->x - thing->PrevX);

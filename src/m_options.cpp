@@ -99,6 +99,8 @@ EXTERN_CVAR (Int, snd_samplerate)
 EXTERN_CVAR (Bool, snd_3d)
 EXTERN_CVAR (Bool, snd_waterreverb)
 
+EXTERN_CVAR(Float, r_spritedistancecull)
+
 static void CalcIndent (menu_t *menu);
 
 void M_ChangeMessages ();
@@ -516,6 +518,7 @@ static menuitem_t VideoItems[] = {
 	{ discrete, "Rendering Interpolation",	{&cl_capfps},	   	{2.0}, {0.0},	{0.0}, {NoYes} },	
 	{ discrete, "Column render mode",	{&r_columnmethod},		{2.0}, {0.0},	{0.0}, {ColumnMethods} },
 	{ discrete, "Detail mode",			{&r_detail},		   	{5.0}, {0.0},	{0.0}, {DetailModes} },
+	{ slider,	"Sprite Cull Distance",	{&r_spritedistancecull},{2000.0}, {8000.0},	{500.0}, {NULL} },
 	{ discrete, "Stretch short skies",	{&r_stretchsky},	   	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Stretch status bar",	{&st_scale},			{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Screen wipe style",	{&wipetype},			{4.0}, {0.0},	{0.0}, {Wipes} },
@@ -524,12 +527,12 @@ static menuitem_t VideoItems[] = {
 	{ discrete, "DirectDraw palette hack", {&vid_palettehack},	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Use attached surfaces", {&vid_attachedsurfaces},{2.0}, {0.0},	{0.0}, {OnOff} },
 #endif
-//	{ redtext,	" ",					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
+	{ redtext,	" ",					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
 	{ discrete, "Use fuzz effect",		{&r_drawfuzz},			{2.0}, {0.0},	{0.0}, {YesNo} },
 	{ discrete, "Rocket Trails",		{&cl_rockettrails},		{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Blood Type",			{&cl_bloodtype},	   	{3.0}, {0.0},	{0.0}, {BloodTypes} },
 	{ discrete, "Bullet Puff Type",		{&cl_pufftype},			{2.0}, {0.0},	{0.0}, {PuffTypes} },
-	{ discrete, "Interpolate monster movement",	{&nomonsterinterpolation},		{2.0}, {0.0},	{0.0}, {NoYes} },
+	{ discrete, "Interpolate monsters",	{&nomonsterinterpolation},		{2.0}, {0.0},	{0.0}, {NoYes} },
 };
 
 menu_t VideoMenu =
