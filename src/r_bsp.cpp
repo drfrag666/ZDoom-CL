@@ -50,6 +50,8 @@
 #include "r_bsp.h"
 #include "v_palette.h"
 
+#include "vectors.h"
+
 int WallMost (short *mostbuf, const secplane_t &plane);
 
 seg_t*			curline;
@@ -57,6 +59,7 @@ side_t* 		sidedef;
 line_t* 		linedef;
 sector_t*		frontsector;
 sector_t*		backsector;
+sector_t*		fcfrontsector;
 
 // killough 4/7/98: indicates doors closed wrt automap bugfix:
 int				doorclosed;
@@ -71,6 +74,11 @@ extern short	walltop[MAXWIDTH];	// [RH] record max extents of wall
 extern short	wallbottom[MAXWIDTH];
 extern short	wallupper[MAXWIDTH];
 extern short	walllower[MAXWIDTH];
+short	fcwalltop[MAXWIDTH];
+short	fcwallbottom[MAXWIDTH];
+
+visplane_t 				*fcfloorplane;
+visplane_t 				*fcceilingplane;
 
 fixed_t			rw_backcz1, rw_backcz2;
 fixed_t			rw_backfz1, rw_backfz2;
@@ -107,6 +115,20 @@ seg_t *ActiveWallMirror;
 TArray<size_t> WallMirrors;
 
 CVAR (Bool, r_drawflat, false, 0)		// [RH] Don't texture segs?
+
+double line_distance_cull = 1e16;
+
+CUSTOM_CVAR(Float, r_linedistancecull, 8000.0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (r_linedistancecull > 0.0)
+	{
+		line_distance_cull = r_linedistancecull * r_linedistancecull;
+	}
+	else
+	{
+		line_distance_cull = 1e16;
+	}
+}
 
 
 void R_StoreWallRange (int start, int stop);
@@ -160,7 +182,7 @@ static cliprange_t		solidsegs[MAXWIDTH/2+2];
 //
 //==========================================================================
 
-void R_ClipWallSegment (int first, int last, bool solid)
+void R_ClipWallSegment (int first, int last, bool solid, bool farclip)
 {
 	cliprange_t *next, *start;
 	int i, j;
@@ -176,7 +198,10 @@ void R_ClipWallSegment (int first, int last, bool solid)
 		if (last <= start->first)
 		{
 			// Post is entirely visible (above start).
-			R_StoreWallRange (first, last);
+			if (!farclip)
+				R_StoreWallRange (first, last);
+			else
+				R_AddFarClipWallSegment(first, last);
 
 			// Insert a new clippost for solid walls.
 			if (solid)
@@ -202,7 +227,10 @@ void R_ClipWallSegment (int first, int last, bool solid)
 		}
 
 		// There is a fragment above *start.
-		R_StoreWallRange (first, start->first);
+		if (!farclip)
+			R_StoreWallRange (first, start->first);
+		else
+			R_AddFarClipWallSegment(first, start->first);
 
 		// Adjust the clip size for solid walls
 		if (solid)
@@ -219,7 +247,10 @@ void R_ClipWallSegment (int first, int last, bool solid)
 	while (last >= (next+1)->first)
 	{
 		// There is a fragment between two posts.
-		R_StoreWallRange (next->last, (next+1)->first);
+		if (!farclip)
+			R_StoreWallRange (next->last, (next+1)->first);
+		else
+			R_AddFarClipWallSegment(next->last, (next+1)->first);
 		next++;
 		
 		if (last <= next->last)
@@ -231,7 +262,10 @@ void R_ClipWallSegment (int first, int last, bool solid)
 	}
 
 	// There is a fragment after *next.
-	R_StoreWallRange (next->last, last);
+	if (!farclip)
+		R_StoreWallRange (next->last, last);
+	else
+		R_AddFarClipWallSegment(next->last, last);
 
 crunch:
 	if (solid)
@@ -265,6 +299,144 @@ void R_ClearClipSegs (short left, short right)
 	solidsegs[1].last = 0x7fff;		// new short limit --  killough
 	newend = solidsegs+2;
 }
+
+
+// FarClipLine
+void R_AddFarClipLine(seg_t *line)
+{
+	fixed_t			tx1, tx2, ty1, ty2;
+
+	fcfrontsector = frontsector;
+	fcfloorplane = floorplane;
+	fcceilingplane = ceilingplane;
+
+	tx1 = line->v1->x - viewx;
+	tx2 = line->v2->x - viewx;
+	ty1 = line->v1->y - viewy;
+	ty2 = line->v2->y - viewy;
+
+	// Reject lines not facing viewer
+	if (DMulScale32 (ty1, tx1-tx2, tx1, ty2-ty1) >= 0)
+		return;
+
+	WallTX1 = DMulScale20 (tx1, viewsin, -ty1, viewcos);
+	WallTX2 = DMulScale20 (tx2, viewsin, -ty2, viewcos);
+
+	WallTY1 = DMulScale20 (tx1, viewtancos, ty1, viewtansin);
+	WallTY2 = DMulScale20 (tx2, viewtancos, ty2, viewtansin);
+
+	if (MirrorFlags & RF_XFLIP)
+	{
+		int t = 256-WallTX1;
+		WallTX1 = 256-WallTX2;
+		WallTX2 = t;
+		swap (WallTY1, WallTY2);
+	}
+
+	if (WallTX1 >= -WallTY1)
+	{
+		if (WallTX1 > WallTY1) return;	// left edge is off the right side
+		if (WallTY1 == 0) return;
+		WallSX1 = (centerxfrac + Scale (WallTX1, centerxfrac, WallTY1)) >> FRACBITS;
+		if (WallTX1 >= 0) WallSX1 = MIN (viewwidth, WallSX1+1); // fix for signed divide
+		WallSZ1 = WallTY1;
+	}
+	else
+	{
+		if (WallTX2 < -WallTY2) return;	// wall is off the left side
+		fixed_t den = WallTX1 - WallTX2 - WallTY2 + WallTY1;	
+		if (den == 0) return;
+		WallSX1 = 0;
+		WallSZ1 = WallTY1 + Scale (WallTY2 - WallTY1, WallTX1 + WallTY1, den);
+	}
+
+	if (WallSZ1 < 32)
+		return;
+
+	if (WallTX2 <= WallTY2)
+	{
+		if (WallTX2 < -WallTY2) return;	// right edge is off the left side
+		if (WallTY2 == 0) return;
+		WallSX2 = (centerxfrac + Scale (WallTX2, centerxfrac, WallTY2)) >> FRACBITS;
+		if (WallTX2 >= 0) WallSX2 = MIN (viewwidth, WallSX2+1);	// fix for signed divide
+		WallSZ2 = WallTY2;
+	}
+	else
+	{
+		if (WallTX1 > WallTY1) return;	// wall is off the right side
+		fixed_t den = WallTY2 - WallTY1 - WallTX2 + WallTX1;
+		if (den == 0) return;
+		WallSX2 = viewwidth;
+		WallSZ2 = WallTY1 + Scale (WallTY2 - WallTY1, WallTX1 - WallTY1, den);
+	}
+
+	if (WallSZ2 < 32 || WallSX2 <= WallSX1)
+		return;
+
+	if (WallSX1 >= WindowRight || WallSX2 <= WindowLeft)
+		return;
+
+	if (line->linedef == NULL)
+		return;
+
+	R_ClipWallSegment (WallSX1, WallSX2, true, true);
+}
+
+void R_AddFarClipWallSegment(int x1, int x2)
+{
+	//WallMost (fcwalltop, fcfrontsector->ceilingplane);
+	WallMost (fcwallbottom, fcfrontsector->floorplane);
+	memcpy(fcwalltop, fcwallbottom, sizeof(short) * MAXWIDTH);
+
+	// clip wall to the floor and ceiling
+	for (int x = x1; x < x2; ++x)
+	{
+		if (fcwalltop[x] < ceilingclip[x])
+		{
+			fcwalltop[x] = ceilingclip[x];
+		}
+		if (fcwallbottom[x] > floorclip[x])
+		{
+			fcwallbottom[x] = floorclip[x];
+		}
+	}
+
+	if (fcceilingplane)
+	{
+		fcceilingplane = R_CheckPlane (fcceilingplane, x1, x2);
+
+		for (int x = x1; x < x2; ++x)
+		{
+			short top = ceilingclip[x];
+			short bottom = MIN(fcwalltop[x], floorclip[x]);
+			if (top < bottom)
+			{
+				fcceilingplane->top[x] = top;
+				fcceilingplane->bottom[x] = bottom;
+			}
+		}
+	}
+
+	if (fcfloorplane)
+	{
+		fcfloorplane = R_CheckPlane (fcfloorplane, x1, x2);
+		
+		for (int x = x1; x < x2; ++x)
+		{
+			short top = MAX(fcwallbottom[x], ceilingclip[x]);
+			short bottom = floorclip[x];
+			if (top < bottom)
+			{
+				assert(bottom <= viewheight);
+				fcfloorplane->top[x] = top;
+				fcfloorplane->bottom[x] = bottom;
+			}
+		}
+	}
+	
+	return;
+}
+
 
 int GetFloorLight (const sector_t *sec)
 {
@@ -848,7 +1020,7 @@ void R_AddLine (seg_t *line)
 #endif
 	}
 
-	R_ClipWallSegment (WallSX1, WallSX2, solid);
+	R_ClipWallSegment (WallSX1, WallSX2, solid, false);
 }
 
 
@@ -1135,9 +1307,23 @@ void R_Subsector (subsector_t *sub)
 		}
 	}
 
+	typedef float	vec2_t[2];
+	vec2_t viewpointPos = {viewx/float(FRACUNIT),viewy/float(FRACUNIT)};
+	vec2_t fPos1 = {line->v1->x/float(FRACUNIT),line->v1->y/float(FRACUNIT)};
+	vec2_t fPos2 = {line->v2->x/float(FRACUNIT),line->v2->y/float(FRACUNIT)};
+	vec2_t dist1, dist2;
+
 	while (count--)
 	{
-		if (!line->bPolySeg)
+		VectorSubtract( fPos1, viewpointPos, dist1 );
+		double dist1sq = DotProduct( dist1, dist1 );
+		VectorSubtract( fPos2, viewpointPos, dist2 );
+		double dist2sq = DotProduct( dist2, dist2 );
+		if (dist1sq > line_distance_cull && dist2sq > line_distance_cull)
+		{
+			R_AddFarClipLine(line);
+		}
+		else if (!line->bPolySeg)
 		{
 			R_AddLine (line);
 		}

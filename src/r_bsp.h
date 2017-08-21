@@ -78,5 +78,8 @@ void R_RenderBSPNode (void *node);
 // killough 4/13/98: fake floors/ceilings for deep water / fake ceilings:
 sector_t *R_FakeFlat(sector_t *, sector_t *, int *, int *, BOOL);
 
+// FarClipLine
+void R_AddFarClipLine(seg_t *line);
+void R_AddFarClipWallSegment(int x1, int x2);
 
 #endif

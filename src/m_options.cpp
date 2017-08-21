@@ -100,6 +100,7 @@ EXTERN_CVAR (Bool, snd_3d)
 EXTERN_CVAR (Bool, snd_waterreverb)
 
 EXTERN_CVAR(Float, r_spritedistancecull)
+EXTERN_CVAR(Float, r_linedistancecull)
 
 static void CalcIndent (menu_t *menu);
 
@@ -519,6 +520,7 @@ static menuitem_t VideoItems[] = {
 	{ discrete, "Column render mode",	{&r_columnmethod},		{2.0}, {0.0},	{0.0}, {ColumnMethods} },
 	{ discrete, "Detail mode",			{&r_detail},		   	{5.0}, {0.0},	{0.0}, {DetailModes} },
 	{ slider,	"Sprite Cull Distance",	{&r_spritedistancecull},{2000.0}, {8000.0},	{500.0}, {NULL} },
+	{ slider,	"Wall Cull Distance",	{&r_linedistancecull},{4000.0}, {16000.0},	{1000.0}, {NULL} },
 	{ discrete, "Stretch short skies",	{&r_stretchsky},	   	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Stretch status bar",	{&st_scale},			{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Screen wipe style",	{&wipetype},			{4.0}, {0.0},	{0.0}, {Wipes} },
