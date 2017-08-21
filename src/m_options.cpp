@@ -441,6 +441,7 @@ menu_t ControlsMenu =
  *=======================================*/
 static void StartMessagesMenu (void);
 static void StartAutomapMenu (void);
+static void DisableCulling ();
 
 EXTERN_CVAR (Bool, st_scale)
 EXTERN_CVAR (Int,  r_detail)
@@ -518,9 +519,12 @@ static menuitem_t VideoItems[] = {
 	{ discrete, "Vertical Sync",		{&vid_vsync},	   		{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Rendering Interpolation",	{&cl_capfps},	   	{2.0}, {0.0},	{0.0}, {NoYes} },	
 	{ discrete, "Column render mode",	{&r_columnmethod},		{2.0}, {0.0},	{0.0}, {ColumnMethods} },
+	{ redtext,	" ",					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
 	{ discrete, "Detail mode",			{&r_detail},		   	{5.0}, {0.0},	{0.0}, {DetailModes} },
 	{ slider,	"Sprite Cull Distance",	{&r_spritedistancecull},{2000.0}, {8000.0},	{500.0}, {NULL} },
 	{ slider,	"Wall Cull Distance",	{&r_linedistancecull},{4000.0}, {16000.0},	{1000.0}, {NULL} },
+	{ more,		"Disable Render Culling", {NULL},			{0.0}, {0.0},	{0.0}, {(value_t *)DisableCulling} },
+	{ redtext,	" ",					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
 	{ discrete, "Stretch short skies",	{&r_stretchsky},	   	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Stretch status bar",	{&st_scale},			{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Screen wipe style",	{&wipetype},			{4.0}, {0.0},	{0.0}, {Wipes} },
@@ -2389,6 +2393,11 @@ static void StartMessagesMenu (void)
 static void StartAutomapMenu (void)
 {
 	M_SwitchMenu (&AutomapMenu);
+}
+
+static void DisableCulling (void)
+{
+	AddCommandString ("culloff");
 }
 
 CCMD (menu_automap)
