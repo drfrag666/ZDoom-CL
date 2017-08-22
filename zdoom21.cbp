@@ -12,7 +12,7 @@
 				<Option type="0" />
 				<Option compiler="old_gnu_gcc_compiler" />
 				<Compiler>
-					<Add option="-DNDEBUG -march=i486 -mtune=i486 -Wall -Wno-unused -O3 -fomit-frame-pointer -pipe" />
+					<Add option="-DNDEBUG -mtune=i586 -Wall -Wno-unused -O3 -fomit-frame-pointer -pipe" />
 					<Add directory="src/win32" />
 					<Add directory="src/sound" />
 					<Add directory="src" />
