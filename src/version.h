@@ -40,10 +40,10 @@
 
 /** Lots of different version numbers **/
 
-#define DOTVERSIONSTR_NOREV "2.1.4"
+#define DOTVERSIONSTR_NOREV "2.1.4a"
 
 // The version string the user actually sees.
-#define DOTVERSIONSTR DOTVERSIONSTR_NOREV " CLASSIC"
+#define DOTVERSIONSTR DOTVERSIONSTR_NOREV ""
 
 // The version as seen in the Windows resource
 #define RC_FILEVERSION 2,1,2,SVN_REVISION_NUMBER
