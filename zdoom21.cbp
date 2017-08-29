@@ -387,6 +387,7 @@
 		<Unit filename="src/infodefaults.cpp" />
 		<Unit filename="src/infomacros.h" />
 		<Unit filename="src/lists.h" />
+		<Unit filename="src/kplib.cpp" />
 		<Unit filename="src/lumpconfigfile.cpp" />
 		<Unit filename="src/lumpconfigfile.h" />
 		<Unit filename="src/m_alloc.cpp" />
