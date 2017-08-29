@@ -306,11 +306,11 @@
 		<Unit filename="src/g_hub.h" />
 		<Unit filename="src/g_level.cpp" />
 		<Unit filename="src/g_level.h" />
-		<Unit filename="src/g_raven/a_artiegg.cpp" />
 		<Unit filename="src/g_raven/a_artitele.cpp" />
 		<Unit filename="src/g_raven/a_minotaur.cpp" />
 		<Unit filename="src/g_raven/a_ravenambient.cpp" />
 		<Unit filename="src/g_raven/ravenshared.h" />
+		<Unit filename="src/g_shared/a_morph.cpp" />
 		<Unit filename="src/g_shared/a_action.cpp" />
 		<Unit filename="src/g_shared/a_action.h" />
 		<Unit filename="src/g_shared/a_artifacts.cpp" />
