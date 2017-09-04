@@ -3769,7 +3769,10 @@ int DLevelScript::RunScript ()
 				if (pcd == PCD_ENDPRINTBOLD || screen == NULL ||
 					screen->CheckLocalView (consoleplayer))
 				{
-					C_MidPrint (work);
+					if (pcd == PCD_ENDPRINTBOLD)
+						C_MidPrintBold (work);
+					else
+						C_MidPrint (work);
 				}
 			}
 			else
