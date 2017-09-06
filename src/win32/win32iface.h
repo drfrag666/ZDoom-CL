@@ -254,6 +254,7 @@ private:
 	PalEntry FlashColor;
 	int FlashAmount;
 	int TrueHeight;
+	int PixelDoubling;
 	float Gamma;
 	bool UpdatePending;
 	bool NeedPalUpdate;

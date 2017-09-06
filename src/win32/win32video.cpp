@@ -184,6 +184,7 @@ bool Win32Video::InitD3D9 ()
 	FreeModes ();
 	AddD3DModes (D3DFMT_X8R8G8B8);
 	AddD3DModes (D3DFMT_R5G6B5);
+	AddLowResModes ();
 	AddLetterboxModes ();
 	if (m_Modes == NULL)
 	{ // Too bad. We didn't find any modes for D3D9. We probably won't find any
@@ -336,11 +337,11 @@ void Win32Video::AddLetterboxModes ()
 		{
 			if (mode->width >= 360)
 			{
-				AddMode (mode->width, mode->width * 9/16, mode->bits, mode->height, 0);
+				AddMode (mode->width, mode->width * 9/16, mode->bits, mode->height,  mode->doubling);
 			}
 			if (mode->width > 640)
 			{
-				AddMode (mode->width, mode->width * 10/16, mode->bits, mode->height, 0);
+				AddMode (mode->width, mode->width * 10/16, mode->bits, mode->height,  mode->doubling);
 			}
 		}
 	}
@@ -351,10 +352,10 @@ void Win32Video::AddLetterboxModes ()
 // Win32Video :: AddLowResModes
 //
 // Recent NVidia drivers no longer support resolutions below 640x480, even
-// if you try to add them as a custom resolution. With DDrawFB, pixel doubling
-// is easy to do but not hardware-accelerated. If you have 1280x800, then you
-// can have 320x200, but don't be surprised if it shows up as widescreen on
-// a widescreen monitor, since that's what it is.
+// if you try to add them as a custom resolution. With D3DFB, pixel doubling
+// is quite easy to do and hardware-accelerated. If you have 1280x800, then
+// you can have 320x200, but don't be surprised if it shows up as widescreen
+// on a widescreen monitor, since that's what it is.
 //
 //==========================================================================
 

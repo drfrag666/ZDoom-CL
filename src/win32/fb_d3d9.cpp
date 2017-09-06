@@ -191,6 +191,7 @@ D3DFB::D3DFB (int width, int height, bool fullscreen)
 	PalFormat = D3DFMT_UNKNOWN;
 	VSync = vid_vsync;
 	OffByOneAt = -1;
+	PixelDoubling = 0;
 
 	Gamma = 1.0;
 	memset (FlashConstants, 0, sizeof(FlashConstants));
@@ -222,6 +223,7 @@ D3DFB::D3DFB (int width, int height, bool fullscreen)
 			if (mode->width == Width && mode->height == Height)
 			{
 				TrueHeight = mode->realheight;
+				PixelDoubling = mode->doubling;
 				break;
 			}
 		}
@@ -265,8 +267,8 @@ void D3DFB::FillPresentParameters (D3DPRESENT_PARAMETERS *pp, bool fullscreen, b
 	memset (pp, 0, sizeof(*pp));
 	pp->Windowed = !fullscreen;
 	pp->SwapEffect = D3DSWAPEFFECT_DISCARD;
-	pp->BackBufferWidth = Width;
-	pp->BackBufferHeight = TrueHeight;
+	pp->BackBufferWidth = Width << PixelDoubling;
+	pp->BackBufferHeight = TrueHeight << PixelDoubling;
 	pp->BackBufferFormat = fullscreen ? D3DFMT_X8R8G8B8 : D3DFMT_UNKNOWN;
 	pp->hDeviceWindow = Window;
 	pp->PresentationInterval = vsync ? D3DPRESENT_INTERVAL_ONE : D3DPRESENT_INTERVAL_IMMEDIATE;
@@ -620,8 +622,8 @@ bool D3DFB::CreatePaletteTexture ()
 bool D3DFB::CreateVertexes ()
 {
 	float top = (TrueHeight - Height) * 0.5f - 0.5f;
-	float right = float(Width) - 0.5f;
-	float bot = float(Height) + top + 1.f;
+	float right = float(Width << PixelDoubling) - 0.5f;
+	float bot = float(Height << PixelDoubling) + top + 1.f;
 	float texright = float(Width) / float(FBWidth);
 	float texbot = float(Height) / float(FBHeight);
 	FBVERTEX verts[4] =
