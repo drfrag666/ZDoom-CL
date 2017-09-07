@@ -270,6 +270,7 @@ void D3DFB::FillPresentParameters (D3DPRESENT_PARAMETERS *pp, bool fullscreen, b
 	pp->BackBufferWidth = Width << PixelDoubling;
 	pp->BackBufferHeight = TrueHeight << PixelDoubling;
 	pp->BackBufferFormat = fullscreen ? D3DFMT_X8R8G8B8 : D3DFMT_UNKNOWN;
+	pp->BackBufferCount = 1;
 	pp->hDeviceWindow = Window;
 	pp->PresentationInterval = vsync ? D3DPRESENT_INTERVAL_ONE : D3DPRESENT_INTERVAL_IMMEDIATE;
 }
