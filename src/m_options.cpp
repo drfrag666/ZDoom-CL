@@ -479,7 +479,8 @@ static value_t DetailModes[] =
 	{ 2.0, "Double Vertically" },
 	{ 3.0, "Double Horiz and Vert" },
 	{ 4.0, "Quad Horiz and Double Vert" },
-	{ 5.0, "Triple Horiz and Double Vert" }
+	{ 5.0, "Triple Horiz and Double Vert" },
+	{ 6.0, "Quad Horiz and Vert" }
 };
 
 static value_t ColumnMethods[] = {
@@ -527,7 +528,7 @@ static menuitem_t VideoItems[] = {
 	{ discrete, "Rendering Interpolation",	{&cl_capfps},	   	{2.0}, {0.0},	{0.0}, {NoYes} },	
 	{ discrete, "Column render mode",	{&r_columnmethod},		{2.0}, {0.0},	{0.0}, {ColumnMethods} },
 	{ redtext,	" ",					{NULL},					{0.0}, {0.0},	{0.0}, {NULL} },
-	{ discrete, "Detail mode",			{&r_detail},		   	{6.0}, {0.0},	{0.0}, {DetailModes} },
+	{ discrete, "Detail mode",			{&r_detail},		   	{7.0}, {0.0},	{0.0}, {DetailModes} },
 	{ slider,	"Sprite Cull Distance",	{&r_spritedistancecull},{2000.0}, {8000.0},	{500.0}, {NULL} },
 	{ slider,	"Wall Cull Distance",	{&r_linedistancecull},{4000.0}, {16000.0},	{1000.0}, {NULL} },
 	{ more,		"Disable Render Culling", {NULL},			{0.0}, {0.0},	{0.0}, {(value_t *)DisableCulling} },
