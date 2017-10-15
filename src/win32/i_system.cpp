@@ -269,9 +269,13 @@ void I_DetectOS (void)
 				{
 					osname = "2000";
 				}
-				else
+				else if (info.dwMinorVersion == 1)
 				{
 					osname = "XP";
+				}
+				else
+				{
+					osname = "Server 2003";
 				}
 			}
 			else
@@ -280,9 +284,21 @@ void I_DetectOS (void)
 				{
 					osname = "Vista";
 				}
-				else
+				else if (info.dwMinorVersion == 1)
 				{
 					osname = "7";
+				}
+				else if (info.dwMinorVersion == 2)
+				{
+					osname = "8";
+				}
+				else if (info.dwMinorVersion == 3)
+				{
+					osname = "8.1";
+				}
+				else
+				{
+					osname = "10";
 				}
 			}
 		}
@@ -294,10 +310,21 @@ void I_DetectOS (void)
 		break;
 	}
 
-	Printf ("OS: Windows %s %lu.%lu (Build %lu)\n",
-			osname,
-			info.dwMajorVersion, info.dwMinorVersion,
-			OSPlatform == os_Win95 ? info.dwBuildNumber & 0xffff : info.dwBuildNumber);
+	if (OSPlatform == os_Win95)
+	{
+		Printf ("OS: Windows %s %lu.%lu (Build %lu)\n",
+				osname,
+				info.dwMajorVersion, info.dwMinorVersion,
+				info.dwBuildNumber & 0xffff);
+	}
+	else
+	{
+		Printf ("OS: Windows %s (NT %lu.%lu) Build %lu\n",
+				osname,
+				info.dwMajorVersion, info.dwMinorVersion,
+				info.dwBuildNumber);
+	}
+
 	if (info.szCSDVersion[0])
 	{
 		Printf ("    %s\n", info.szCSDVersion);
