@@ -1863,6 +1863,9 @@ static void PutSaveComment (FILE *file)
 	//strcpy (comment, level.level_name);
 	sprintf(comment, "%s - %s", level.mapname, level.level_name);
 	len = (WORD)strlen (comment);
+	int maxlen = strlen (level.mapname) == 5? 26 : 28;
+	if (len > (WORD)maxlen)
+		len = (WORD)maxlen;
 	comment[len] = '\n';
 
 	// Append elapsed time
