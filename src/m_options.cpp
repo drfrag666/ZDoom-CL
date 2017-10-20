@@ -541,9 +541,9 @@ static menuitem_t VideoItems[] = {
 	{ discrete, "Stretch short skies",	{&r_stretchsky},	   	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Stretch status bar",	{&st_scale},			{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Screen wipe style",	{&wipetype},			{4.0}, {0.0},	{0.0}, {Wipes} },
+#ifdef _WIN32
 	{ discrete, "Video Backend", 		{&vid_forceddraw},		{2.0}, {0.0},	{0.0}, {Backends} },
 	{ discrete, "DirectDraw display bits", {&vid_displaybits},	{3.0}, {0.0},	{0.0}, {Bits} },
-#ifdef _WIN32
 	{ discrete, "DirectDraw palette hack", {&vid_palettehack},	{2.0}, {0.0},	{0.0}, {OnOff} },
 	{ discrete, "Use attached surfaces", {&vid_attachedsurfaces},{2.0}, {0.0},	{0.0}, {OnOff} },
 #endif
