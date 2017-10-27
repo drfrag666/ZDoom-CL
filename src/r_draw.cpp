@@ -1997,7 +1997,8 @@ void R_DetailDouble ()
 			int y,x;
 			BYTE *linefrom, *lineto;
 			BYTE c;
-			int offset = SCREENWIDTH > 640 ? CPU.DataL1LineSize : 0;
+			int pitchadj = CPU.bIsAMD ? CPU.DataL1LineSize : MAX(0, CPU.DataL1LineSize - 8);
+			int offset = SCREENWIDTH > 640 ? pitchadj : 0;
 
 			if (screenblocks <= 9)
 			{
@@ -2043,7 +2044,8 @@ void R_DetailDouble ()
 			int y,x;
 			BYTE *linefrom, *lineto;
 			BYTE c;
-			int offset = SCREENWIDTH > 640 ? CPU.DataL1LineSize*2 : 0;
+			int pitchadj = CPU.bIsAMD ? CPU.DataL1LineSize : MAX(0, CPU.DataL1LineSize - 8);
+			int offset = SCREENWIDTH > 640 ? pitchadj*2 : 0;
 
 			if (screenblocks <= 9)
 			{
