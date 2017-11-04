@@ -975,8 +975,8 @@ static void M_ExtractSaveData (const FSaveGameNode *node)
 				{
 					memcpy (comment, time, timelen);
 					comment[timelen] = '\n';
-					comment[timelen+1] = '\n';
-					timelen += 2;
+					//comment[timelen+1] = '\n';
+					timelen += 1; //+=2
 				}
 				if (commentlen)
 				{
@@ -1033,7 +1033,8 @@ static void M_DrawSaveLoadCommon ()
 	const int commentLeft = savepicLeft;
 	const int commentTop = savepicTop + savepicHeight + 16;
 	const int commentWidth = savepicWidth;
-	const int commentHeight = (51+(screen->GetHeight()>200?10:0))*CleanYfac;
+	//const int commentHeight = (51+(screen->GetHeight()>200?10:0))*CleanYfac;
+	const int commentHeight = listboxHeight - savepicHeight -16;
 	const int commentRight = commentLeft + commentWidth;
 	const int commentBottom = commentTop + commentHeight;
 
@@ -1076,10 +1077,11 @@ static void M_DrawSaveLoadCommon ()
 	screen->Clear (commentLeft, commentTop, commentRight, commentBottom, 0);
 	if (SaveComment != NULL)
 	{
+		int maxlines = screen->GetHeight()>240?10:screen->GetHeight()>200?8:5;
 		// I'm not sure why SaveComment would go NULL in this loop, but I got
 		// a crash report where it was NULL when i reached 1, so now I check
 		// for that.
-		for (i = 0; SaveComment != NULL && SaveComment[i].width != -1 && i < 6; ++i)
+		for (i = 0; SaveComment != NULL && SaveComment[i].width != -1 && i < maxlines; ++i)
 		{
 			screen->DrawText (CR_GOLD, commentLeft, commentTop
 				+ SmallFont->GetHeight()*i*CleanYfac, SaveComment[i].string,
