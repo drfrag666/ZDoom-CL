@@ -83,7 +83,7 @@ EXTERN_CVAR(Bool, nomonsterinterpolation)
 //
 // defaulted values
 //
-CVAR (Float, mouse_sensitivity, 1.f, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+CVAR (Float, mouse_sensitivity, 1.5f, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 
 // Show messages has default, 0 = off, 1 = on
 CVAR (Bool, show_messages, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
