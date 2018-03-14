@@ -324,6 +324,7 @@ next E4M2
 secretnext E4M9
 sky1 SKY4 0
 cluster 4
+par 165
 sucktime 1
 music D_E3M4
 
@@ -334,6 +335,7 @@ next E4M3
 secretnext E4M9
 sky1 SKY4 0
 cluster 4
+par 255
 sucktime 1
 music D_E3M2
 
@@ -344,6 +346,7 @@ next E4M4
 secretnext E4M9
 sky1 SKY4 0
 cluster 4
+par 135
 sucktime 1
 music D_E3M3
 
@@ -354,6 +357,7 @@ next E4M5
 secretnext E4M9
 sky1 SKY4 0
 cluster 4
+par 150
 sucktime 1
 music D_E1M5
 
@@ -364,6 +368,7 @@ next E4M6
 secretnext E4M9
 sky1 SKY4 0
 cluster 4
+par 180
 sucktime 1
 music D_E2M7
 
@@ -376,6 +381,7 @@ sky1 SKY4 0
 cluster 4
 cyberdemonspecial
 specialaction_opendoor
+par 390
 sucktime 1
 music D_E2M4
 
@@ -386,6 +392,7 @@ next E4M8
 secretnext E4M9
 sky1 SKY4 0
 cluster 4
+par 135
 sucktime 1
 music D_E2M6
 
@@ -400,6 +407,7 @@ nointermission
 nosoundclipping
 spidermastermindspecial
 specialaction_lowerfloor
+par 360
 sucktime 1
 music D_E2M5
 
@@ -410,6 +418,7 @@ next E4M3
 secretnext E4M3
 sky1 SKY4 0
 cluster 4
+par 180
 sucktime 1
 music D_E1M9
 
