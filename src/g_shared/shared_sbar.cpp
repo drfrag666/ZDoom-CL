@@ -60,6 +60,7 @@ EXTERN_CVAR (Bool, am_showtime)
 EXTERN_CVAR (Bool, am_showtotaltime)
 EXTERN_CVAR (Bool, noisedebug)
 EXTERN_CVAR (Bool, hud_scale)
+EXTERN_CVAR (Int, r_detail)
 
 FBaseStatusBar *StatusBar;
 
@@ -203,7 +204,7 @@ void FBaseStatusBar::SetScaled (bool scale)
 		bool wide = !(CheckRatio (SCREENWIDTH, SCREENHEIGHT) & 3);
 		int basewidth = wide ? 1280 : 960;
 		ST_X = 0;
-		ST_Y = 200 - RelTop;
+		ST_Y = 200 - RelTop + (r_detail > 4 ? 1 : 0);
 		::ST_Y = Scale (ST_Y, SCREENHEIGHT, 200);
 		Displacement = 0;
 	}
