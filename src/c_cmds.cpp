@@ -365,7 +365,7 @@ CCMD (give)
 
 CCMD (gameversion)
 {
-	Printf ("%s CLASSIC : " __DATE__ "\n", DOTVERSIONSTR);
+	Printf ("%s : " __DATE__ "\n", DOTVERSIONSTR);
 }
 
 CCMD (print)
