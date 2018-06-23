@@ -86,8 +86,6 @@ static const FBinding DefBindings[] =
 	{ "s", "+back" },
 	{ "a", "+moveleft" },
 	{ "d", "+moveright" },
-	{ "e", "+jump" },
-	{ "x", "crouch" },
 	{ "mouse1", "+attack" },
 	{ "mouse2", "+strafe" },
 	{ "mouse3", "+forward" },
