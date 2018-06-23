@@ -820,9 +820,8 @@ void M_InsertSaveNode (FSaveGameNode *node)
 	else
 	{ // Add node at top of list
 		probe = static_cast<FSaveGameNode *>(SaveGames.Head);
-		//while (probe->Succ != NULL && !probe->bOldVersion &&
-			//stricmp (node->Title, probe->Title) > 0)
-		while (probe->Succ != NULL && stricmp (node->Filename, probe->Filename) > 0)
+		while (probe->Succ != NULL && !probe->bOldVersion &&
+			stricmp (node->Title, probe->Title) > 0)
 		{
 			probe = static_cast<FSaveGameNode *>(probe->Succ);
 		}
